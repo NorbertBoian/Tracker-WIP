@@ -1,0 +1,171 @@
+.dayContainer {
+  display: grid;
+  padding: 0.375rem 0 calc(0.5rem - 3px) 0;
+  flex: 2.15 1 0;
+  overflow: hidden;
+}
+
+.dayComponent {
+  display: grid;
+  align-items: start;
+  grid-template: auto 1fr/1fr;
+  background-color: var(--day-component-background-color);
+  border-radius: var(--large-border-radius);
+  overflow: hidden;
+  box-shadow: var(--main-box-shadow);
+}
+
+.dayComponentDimensions {
+}
+
+@keyframes inAnimation {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes outAnimation {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+.mounted {
+  /* animation: inAnimation 1270ms ease-out; */
+  /* animation-duration: 0ms; */
+}
+
+.unmounted {
+  /* animation: outAnimation 1270ms ease-out;
+  animation-fill-mode: forwards; */
+  /* animation-duration: 0ms; */
+}
+
+.instantAnimation {
+  /* background-color: red;
+  animation-duration: 0ms; */
+}
+
+.dayPlaceholder {
+}
+
+.dayComponentMargins {
+  /* margin: 1.9rem; */
+  margin: 1.5rem 1.9rem;
+}
+
+.invalidDaySettings {
+  /* padding: 0 3px 0 0; */
+  width: 0.4rem;
+  text-align: start;
+  font-size: 0.8rem;
+  color: var(--warning-color);
+}
+
+.dayAndDaySettingsWrapper {
+  grid-area: 2/1/3/2;
+  display: flex;
+}
+
+.dayStatusIndicator {
+  composes: dayStatusIndicator from "./DayStatusIndicator/DayStatusIndicator.module.css";
+  grid-area: 1/1/2/2;
+  justify-self: stretch;
+}
+
+.daySettingsDotContainer {
+  cursor: pointer;
+  z-index: 1;
+  border: 0;
+  align-items: baseline;
+  padding: 0.4rem;
+  justify-self: end;
+  display: flex;
+  background-color: transparent;
+  grid-area: 2/1/3/2;
+}
+
+.toggleStatsButtonContainer {
+  grid-area: 2/1/3/2;
+  z-index: 1;
+  cursor: pointer;
+  display: flex;
+  height: 1.3rem;
+  width: 1.5rem;
+  align-items: center;
+  justify-content: center;
+  margin: 0.375rem 0 0 0.5rem;
+  border-radius: var(--medium-border-radius);
+  background-color: var(--day-component-graph-icon-background-color);
+  border: 0;
+}
+
+.toggleStatsButtonContainer:hover {
+  background-color: rgb(126, 99, 26);
+  scale: 1.04;
+}
+
+.toggleStatsButtonContainer:active {
+  background-color: rgb(235, 235, 235);
+}
+
+.toggleStatsButtonContainer > img {
+  width: 1rem;
+  height: 0.56rem;
+}
+
+.toggleStatsButtonContainer:focus-visible {
+  outline: 2px solid white;
+}
+
+.daySettingsDotContainer:focus-visible {
+  outline: 0;
+  padding: calc(0.4rem - 2px);
+  border: 2px solid white;
+  border-radius: 20%;
+}
+
+.daySettingsDotContainer:hover > .dot {
+  background-color: rgb(185, 185, 185);
+  scale: 1.08;
+}
+
+.daySettingsDotContainer:active > .dot {
+  background-color: rgb(201, 201, 201);
+  /* scale: 1.05; */
+}
+
+.daySettingsDotContainer > .dot {
+  transition: 100ms;
+  width: 0.69rem;
+  height: 0.69rem;
+  background-color: var(--day-component-settings-dot-background-color);
+  border-radius: 50%;
+}
+
+.dayStatsAndInputsContainer {
+  display: grid;
+  grid-template: 1fr/1fr;
+  /* margin-inline: 0.5rem; */
+  width: calc(100% - 1rem + 6px);
+  justify-self: center;
+  overflow: hidden;
+  grid-area: 3/1/4/2;
+  padding: 0 3px 3px 3px;
+}
+
+/* .dayTimeInputsContainer {
+  grid-area: 3/1/4/2;
+} */
+
+/* .toggleStatsButtonContainer {
+  composes: toggleStatsButtonContainer from "./DayFirstRow/DayFirstRow.module.css";
+  justify-self: start;
+  grid-area: 2/1/3/2;
+} */

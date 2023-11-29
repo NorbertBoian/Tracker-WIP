@@ -1,0 +1,213 @@
+@keyframes backgroundInAnimation {
+  0% {
+    width: 200%;
+    height: unset;
+    aspect-ratio: 1/1;
+    translate: -85% -85%;
+    rotate: 45deg;
+  }
+  100% {
+    width: 200%;
+    height: unset;
+    aspect-ratio: 1/1;
+    translate: -40% -40%;
+    rotate: 45deg;
+  }
+}
+
+@keyframes backgroundOutAnimation {
+  0% {
+    width: 200%;
+    height: unset;
+    aspect-ratio: 1/1;
+    translate: -40% -40%;
+    rotate: 45deg;
+  }
+  100% {
+    width: 200%;
+    height: unset;
+    aspect-ratio: 1/1;
+    translate: -85% -85%;
+    rotate: 45deg;
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes timeChanged {
+  0% {
+    color: rgb(255, 255, 255);
+    font-size: 0.85rem;
+  }
+  1% {
+    color: var(--day-component-time-input-text-color);
+    font-size: 0.82rem;
+  }
+  100% {
+    color: var(--day-component-time-input-text-color);
+    font-size: 0.82rem;
+  }
+}
+
+.stopwatchIconContainer {
+  border: 0;
+  cursor: pointer;
+  transition: all 30ms ease-in-out;
+  display: grid;
+  /* z-index: 1; */
+  position: relative;
+  padding: 0;
+  grid-area: 1/1/2/2;
+  background-color: transparent;
+  width: 1.8rem;
+  height: 1.6rem;
+  overflow: hidden;
+}
+
+.stopwatchIconContainer:focus-visible {
+  outline: none;
+}
+
+.stopwatchIconContainer:hover .background {
+  background-color: rgb(78, 50, 17);
+}
+
+.stopwatchIconContainer:active .background {
+  background-color: rgb(53, 31, 6);
+}
+
+.stopwatchIconContainer:active .stopwatchIconWrapper > img {
+  scale: 1.12;
+}
+
+.stopwatchIconContainer:active + :is(input, input::placeholder) {
+  color: rgb(255, 255, 255);
+  font-size: 0.85rem;
+  animation: timeChanged 300ms 100ms;
+  animation-fill-mode: forwards;
+}
+
+.background {
+  grid-area: 1/1/2/2;
+  /* position: absolute; */
+  top: 0;
+  left: 0;
+  background-color: var(--day-component-stopwatch-icon-background-color);
+  height: 100%;
+  width: 100%;
+}
+
+.hideBackground {
+  animation: backgroundOutAnimation var(--day-stopwatch-animation-duration)
+    ease-in /* var(--day-stopwatch-animation-timing-function) */;
+  animation-fill-mode: forwards;
+}
+
+.dayTimeInputComponent {
+  display: grid;
+  grid-template: 1fr/1fr;
+  justify-items: start;
+  margin-top: 0.5rem;
+  height: 1.6rem;
+}
+
+.invisibleStopwatchButton {
+  grid-area: 1/1/2/2;
+  border-radius: var(--medium-border-radius) 0 0 var(--medium-border-radius);
+  height: 100%;
+  z-index: 1;
+  pointer-events: none;
+  width: 1.8rem;
+}
+
+.dayTimeInputContainer {
+  grid-area: 1/1/2/2;
+  display: grid;
+  grid-template: 1fr/1fr;
+  justify-items: start;
+  border-radius: var(--medium-border-radius);
+  overflow: hidden;
+  width: 100%;
+}
+
+.stopwatchIconWrapper > img {
+  /* z-index: 1; */
+  width: 0.75rem;
+  height: 0.75rem;
+}
+
+.stopwatchIconWrapper {
+  display: flex;
+  align-items: center;
+  height: 1.6rem;
+  width: 1.8rem;
+  justify-content: center;
+  grid-area: 1/1/2/2;
+}
+
+.hideStopwatch {
+  animation: fadeOut 50ms var(--day-stopwatch-animation-timing-function);
+  animation-fill-mode: forwards;
+}
+
+.stopwatchAnimateIn .background {
+  animation: backgroundInAnimation var(--day-stopwatch-animation-duration)
+    var(--day-stopwatch-animation-timing-function);
+}
+
+.stopwatchAnimateIn .stopwatchIconWrapper {
+  opacity: 0;
+  animation: fadeIn 50ms var(--day-stopwatch-animation-timing-function);
+  animation-fill-mode: forwards;
+}
+
+.dayTimeInputContainer > input {
+  width: 100%;
+  grid-area: 1/1/2/2;
+  font-family: var(--main-font-family);
+  font-size: 0.82rem;
+  padding: 0.35em 0;
+  color: var(--day-component-time-input-text-color);
+  text-align: center;
+  height: 100%;
+}
+
+.dayTimeInputContainer > input:focus-visible {
+  outline: 0;
+}
+
+.focusOutline {
+  outline: 2px solid white;
+}
+
+.dayTimeInputContainer > input::placeholder {
+  color: var(--day-component-time-input-placeholder-text-color);
+}
+
+.disabled > input:hover {
+  cursor: auto;
+}
+
+.lightColor {
+  background-color: var(--day-component-time-input-light-background-color);
+}
+
+.darkColor {
+  background-color: var(--day-component-time-input-dark-background-color);
+}

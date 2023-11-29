@@ -1,0 +1,56 @@
+.firstRowWrapper {
+  display: flex;
+  align-items: center;
+  font-family: var(--main-font-family);
+  height: 1.4rem;
+}
+
+.firstRowWrapper h5 {
+  justify-self: center;
+  font-size: 0.94rem;
+  margin: auto;
+}
+
+.toggleStatsButtonContainer {
+  cursor: pointer;
+  display: flex;
+  height: 1.3rem;
+  width: 1.5rem;
+  align-items: center;
+  justify-content: center;
+  margin: 0 0 0 0.5rem;
+  border-radius: var(--medium-border-radius);
+  background-color: var(--day-component-graph-icon-background-color);
+}
+
+.toggleStatsButtonContainer:hover {
+  background-color: rgb(126, 99, 26);
+  scale: 1.04;
+}
+
+.toggleStatsButtonContainer:active {
+  background-color: rgb(235, 235, 235);
+}
+
+.toggleStatsButtonContainer > img {
+  width: 1rem;
+  height: 0.56rem;
+}
+
+.rightSpaceTaker {
+  width: 1.49rem;
+  height: 0;
+  transition: all var(--day-settings-animation-duration)
+    var(--day-settings-animation-timing-function);
+}
+
+.leftSpaceTaker {
+  width: 2rem;
+  height: 0;
+  transition: all var(--day-settings-animation-duration)
+    var(--day-settings-animation-timing-function);
+}
+
+.zeroWidth {
+  width: 0;
+}

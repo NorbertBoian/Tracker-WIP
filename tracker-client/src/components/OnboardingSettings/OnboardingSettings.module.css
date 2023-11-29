@@ -1,0 +1,30 @@
+.onboardingSettingsContainer {
+  color: var(--application-settings-text-color);
+  font-family: var(--main-font-family);
+  font-size: 0.9rem;
+  background-color: var(--application-settings-background-color);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  padding-bottom: 0.2rem;
+  border-radius: 0.5rem;
+  /* max-width: 95%; */
+  /* max-height: 95%; */
+  width: min(35rem, 95%);
+  height: min(60rem, 95%);
+  overflow: hidden;
+  z-index: 3;
+}
+
+.onboardingSettingsHeader {
+  font-family: var(--secondary-font-family);
+  font-size: 1.5rem;
+  font-weight: normal;
+  text-align: center;
+  margin: 0.7rem auto;
+}
+
+.onboardingSettingsDialog {
+  padding: 0;
+  border: 0;
+}

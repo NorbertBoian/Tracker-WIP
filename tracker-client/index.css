@@ -1,0 +1,298 @@
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  color-scheme: dark;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: var(--main-background-color);
+  scrollbar-width: thin;
+  overflow-x: hidden;
+}
+
+@media (device-width > 700px) {
+  body {
+    scrollbar-width: none;
+  }
+  body::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+/* html {
+  font-size: min(100%, 16px);
+}
+
+@media (width <= 360px) {
+  html {
+    font-size: 4.38vw;
+  }
+}
+
+@media screen and (360px <= device-width <=480px) {
+  html {
+    font-size: min(125%, 20px);
+  }
+}
+
+@media screen and (480px <= device-width <= 1600px) {
+  html {
+    font-size: min(110%, 18px);
+  }
+}
+
+@media screen and (width >= 1800px) {
+  html {
+    font-size: 0.89vw;
+  }
+} */
+
+html {
+  font-size: 16px;
+}
+
+@media (width <= 360px) {
+  html {
+    font-size: 4.38vw;
+  }
+}
+
+@media screen and (360px <= device-width <=480px) {
+  html {
+    font-size: 18px;
+  }
+}
+
+@media screen and (480px <= device-width <= 1600px) {
+  html {
+    font-size: 18px;
+  }
+}
+
+@media screen and (width >= 2000px) {
+  html {
+    font-size: 0.9vw;
+  }
+}
+
+:root {
+  --menu-register-button-background-gradient: linear-gradient(
+    82deg,
+    #6d4d37 0%,
+    #83531a 100%
+  );
+  --menu-login-button-background-gradient: linear-gradient(
+    82deg,
+    #8d823c 0%,
+    #baa200 100%
+  );
+  --menu-stats-container-background-gradient: linear-gradient(
+    82deg,
+    #342727 0%,
+    #482825 100%
+  );
+  --menu-guide-button-background-color: linear-gradient(
+    25deg,
+    #ff0066 0%,
+    #860b48 100%
+  );
+  --menu-download-button-background-color: linear-gradient(
+    90deg,
+    #1a7449 0%,
+    #044832 100%
+  );
+
+  --color-picker-controls-enabled-day-backround-gradient: #636d3a
+    linear-gradient(
+      135deg,
+      rgba(255, 255, 255, 0.2) 0%,
+      rgba(255, 255, 255, 0.1) 100%
+    );
+  --color-picker-controls-disabled-day-backround-gradient: #8b9381
+    linear-gradient(
+      180deg,
+      rgba(255, 255, 255, 0.4) 0%,
+      rgba(255, 255, 255, 0.1) 100%
+    );
+
+  --menu-load-button-background-color: linear-gradient(
+    162deg,
+    #9c6d14 0%,
+    #b38e0e 29%,
+    #d1b707 100%
+  );
+  --menu-save-button-background-color: linear-gradient(
+    90deg,
+    #9b1d35 0%,
+    #5b0c1a 70%,
+    #41050f 100%
+  );
+
+  --day-settings-animation-duration: 300ms;
+  --day-settings-animation-timing-function: ease-out;
+
+  --day-stopwatch-animation-duration: 300ms;
+  --day-stopwatch-animation-timing-function: ease-in-out;
+
+  --day-input-and-stats-animation-duration: 200ms;
+  --day-input-and-stats-animation-timing-function: linear;
+
+  --warning-color: #e69500;
+  --main-font-family: "Source Sans Pro", sans-serif;
+  --secondary-font-family: "Oswald", sans-serif;
+  --tertiary-font-family: "Roboto", sans-serif;
+  --small-border-radius: 0.15rem;
+  --medium-border-radius: 0.31rem;
+  --large-border-radius: 0.62rem;
+  --main-box-shadow: 0px 0.25rem 0.19rem 0px rgba(0, 0, 0, 0.12);
+  --main-background-color: #292828;
+  --button-hover-scale: 1.05;
+  --day-component-background-color: #312e2c;
+  --day-component-settings-background-color: #4c4242;
+  --day-component-settings-header-text-color: #f1f0f0;
+  --day-component-settings-text-input-background-color: #322b2b;
+  --day-component-settings-dot-background-color: #a2a1a1;
+  --day-component-first-row-hover-background-color: #23201e;
+  --day-component-graph-icon-background-color: #544741;
+  --day-component-text-color: white;
+  --day-component-time-input-light-background-color: #45403e;
+  --day-component-time-input-dark-background-color: #3e3a38;
+  --day-component-time-input-text-color: #e2e2e2;
+  --day-component-time-input-placeholder-text-color: #8d8d8d;
+  --day-component-status-indicator-good-background-color: #557a14;
+  --day-component-status-indicator-bad-background-color: #a83030;
+  --day-component-status-indicator-neutral-background-color: #928b8a;
+  --day-component-stopwatch-icon-background-color: #554137;
+  --day-component-stats-first-column-background-color: #775c32;
+  --day-component-stats-first-column-text-color: #f3f0ed;
+  --day-component-stats-second-column-light-background-color: #58524d;
+  --day-component-stats-second-column-text-color: #e2e2e2;
+  --day-component-stats-second-column-dark-background-color: #4c4641;
+  --day-component-holiday-text--color: #ded53e;
+  --day-component-regular-date-text-color: #e1e1e1;
+  --month-settings-hourly-rate-text-color: white;
+  --month-settings-hourly-rate-background-color-light: #934c4c;
+  --month-settings-hourly-rate-background-color-dark: #7d3a3a;
+  --month-settings-overtime-multiplier-text-color: white;
+  --month-settings-overtime-multiplier-background-color-light: #96796c;
+  --month-settings-overtime-multiplier-background-color-dark: #846658;
+  --month-settings-background-color: #4c4040;
+  --month-settings-header-text-color: white;
+  --month-settings-close-button-text-color: #d2d1d1;
+  --month-settings-save-button-text-color: white;
+  --month-settings-buttons-background-color: #292828;
+  --month-settings-explanations-text-color: white;
+  --month-settings-explanations-column-divider-color: #e9e9e9;
+  --month-settings-enabled-day-bar-background-color: #636d3a;
+  --month-settings-disabled-day-bar-background-color: #8b9381;
+  --month-settings-day-bar-day-name-text-color: #efefec;
+  --month-settings-day-bar-column-divider-color: #bdc4af;
+  --month-settings-day-bar-input-text-color: white;
+  --month-settings-day-bar-input-placeholder-text-color: #c2c2c2;
+  --month-settings-enabled-day-bar-input-background-color: #34391e;
+  --month-settings-disabled-day-bar-input-background-color: #595e52;
+  --month-settings-day-bar-disable-day-button-background-color: #a4a79d;
+  --month-settings-day-bar-disable-day-button-text-color: white;
+  --month-settings-day-bar-enable-day-button-background-color: #cc9900;
+  --month-settings-day-bar-enable-day-button-text-color: white;
+  --month-settings-mention-text-color: #b2b0b0;
+  --menu-user-button-text-color: #d6d6d6;
+  --menu-user-button-background-color: #413d3d;
+  --menu-save-status-text-color: #c3c0be;
+  --menu-save-status-saved-dot-color: #05e59e;
+  --menu-save-status-not-saved-dot-color: #c2c2c2;
+  --menu-register-button-text-color: #ebe5df;
+  --menu-login-button-text-color: #e4e0c5;
+  --menu-stats-container-text-color: #cfc9c9;
+  --menu-stats-container-showcase-text-color: #c5c3c3;
+  --menu-stats-container-showcase-background-color: #191111;
+  --menu-guide-button-text-color: white;
+  --menu-wide-button-text-color: #ffffffe6;
+  --menu-language-selector-darkest-background-color: hsl(0, 5%, 22%);
+  --menu-language-selector-dark-background-color: hsl(0, 5%, 25%);
+  --menu-language-selector-light-background-color: hsl(0, 5%, 30%);
+  --menu-language-selector-lighter-background-color: hsl(0, 3%, 40%);
+  --menu-language-selector-border-color: #5b3760;
+  --menu-clear-inputs-button-text-color: #e3ded0;
+  --menu-clear-inputs-button-background-color: #755914;
+  --menu-lock-inputs-button-text-color: #e3e8eb;
+  --menu-lock-inputs-button-background-color: #5d6a72;
+  --menu-unlock-inputs-button-text-color: #dbe4db;
+  --menu-unlock-inputs-button-background-color: #4b7949;
+  --menu-toggle-stats-button-text-color: #e3dcdc;
+  --menu-toggle-stats-button-background-color: #744f4f;
+  --menu-select-text-color: #d8d7d7;
+  --menu-select-dark-background-color: #3b3636;
+  --menu-select-light-background-color: #453f3f;
+  --menu-select-lighter-background-color: #4d4646;
+  --menu-select-lightest-background-color: #4f4949;
+  --mobile-floating-menu-button-background-color: #e9bd0b;
+  --mobile-floating-menu-button-text-color: white;
+  --mobile-floating-menu-divider-color: #838383;
+  --mobile-floating-menu-option-text-color: #272622;
+  --mobile-floating-menu-option-background-color: #eeede5;
+  --application-settings-header-text-color: white;
+  --application-settings-close-button-text-color: white;
+  --application-settings-close-button-background-color: #292828;
+  /* --application-settings-background-color: #131313; */
+  --application-settings-background-color: #1d1919;
+  --application-settings-text-color: white;
+  --application-settings-language-select-lighter-background-color: #4c4545;
+  --application-settings-language-select-light-background-color: #4c4545;
+  --application-settings-language-select-dark-background-color: #383334;
+  --application-settings-language-select-border-color: #5b3760;
+  --application-settings-language-select-text-color: white;
+  --application-settings-slider-bar-empty-background-color: #737f7f;
+  --application-settings-slider-bar-filled-background-color: #19b49c;
+  --application-settings-slider-bar-dot-color: white;
+  --application-settings-enabled-day-bar-background-color: #636d3a;
+  --application-settings-disabled-day-bar-background-color: #8b9381;
+  --application-settings-day-bar-enable-button-background-color: #cc9900;
+  --application-settings-day-bar-disable-button-background-color: #a4a79d;
+  --application-settings-day-bar-enable-button-text-color: white;
+  --application-settings-day-bar-disable-button-text-color: white;
+  --application-settings-disabled-day-bar-input-background-color: #595e52;
+  --application-settings-enabled-day-bar-input-background-color: #34391e;
+  --application-settings-disabled-day-bar-input-text-color: white;
+  --application-settings-enabled-day-bar-input-text-color: white;
+  --application-settings-disabled-day-bar-input-placeholder-text-color: #dddddd;
+  --application-settings-enabled-day-bar-input-placeholder-text-color: #dddddd;
+  --application-settings-day-bar-day-name-text-color: #efefec;
+  --application-settings-day-bar-divider-color: #bdc4af;
+  --application-settings-disabled-day-bar-default-button-background-color: #292c2a;
+  --application-settings-enabled-day-bar-default-button-background-color: #28352a;
+  --application-settings-disabled-day-bar-default-button-text-color: white;
+  --application-settings-enabled-day-bar-default-button-text-color: white;
+  --application-settings-enabled-day-bar-color-picker-border-color: #596139;
+  --application-settings-disabled-day-bar-color-picker-border-color: #71756d;
+  --application-settings-hourly-rate-light-background-color: #934c4c;
+  --application-settings-hourly-rate-dark-background-color: #7d3a3a;
+  --application-settings-hourly-rate-text-color: white;
+  --application-settings-overtime-multiplier-light-background-color: #934c4c;
+  --application-settings-overtime-multiplier-dark-background-color: #7d3a3a;
+  --application-settings-overtime-multiplier-text-color: white;
+  --application-settings-displayed-currency-light-background-color: #934c4c;
+  --application-settings-displayed-currency-dark-background-color: #7d3a3a;
+  --application-settings-displayed-currency-text-color: white;
+  --application-settings-mention-color: #7f7f7f;
+  --application-settings-save-button-text-color: white;
+  --application-settings-save-button-background-color: #292828;
+  --application-settings-color-picker-modal-background-color: #111111;
+  --color-picker-modal-close-button-background-color: #3e3e3f;
+  --color-picker-modal-close-button-text-color: #f0f0f0;
+  --color-picker-modal-colored-rectangle-border-color: #424242;
+  --color-picker-modal-input-background-color: #534d4d;
+  --color-picker-modal-input-text-color: white;
+  --color-picker-modal-ok-button-background-color: #c29c49;
+  --color-picker-modal-ok-button-text-color: #f0f0f0;
+  --application-settings-mobile-menu-selected-text-color: white;
+  --application-settings-mobile-menu-not-selected-text-color: #969292;
+  --application-settings-horizontal-divider-color: #383535;
+  --color-picker-arrow-indicator-color: #ffffffc9;
+}

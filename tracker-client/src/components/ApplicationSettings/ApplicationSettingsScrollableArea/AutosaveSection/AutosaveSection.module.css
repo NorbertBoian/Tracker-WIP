@@ -1,0 +1,43 @@
+@value mobile from "../../ApplicationSettings.module.css";
+
+.autoSaveContainer {
+  width: 100%;
+  display: grid;
+  align-items: center;
+  justify-items: center;
+}
+
+.autoSaveSection {
+  width: 100%;
+  grid-column: 1/3;
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+
+.autoSaveDescription {
+  text-align: center;
+}
+.sliderWrapper {
+  margin: 0.7rem 0;
+  width: 100%;
+}
+
+.horizontalDivider {
+  border: 0;
+  margin-inline: auto;
+  margin-block: 0.5rem;
+  height: 1px;
+  width: 90%;
+  background-color: var(--application-settings-horizontal-divider-color);
+  grid-column: 1/3;
+}
+
+.mobile .hideOnMobile {
+  display: none;
+}
+
+.mobile .autoSaveSection {
+  order: 5;
+  margin-block: auto;
+}

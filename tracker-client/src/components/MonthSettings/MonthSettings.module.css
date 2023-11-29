@@ -1,0 +1,116 @@
+@keyframes inAnimation {
+  0% {
+    transform: translateX(420px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes outAnimation {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(420px);
+  }
+}
+
+.monthSettingsFormWrapper {
+  display: flex;
+  justify-content: start;
+  width: 100%;
+  height: 100%;
+  align-items: center;
+}
+
+.monthSettingsComponent {
+  grid-area: 1/-2 / span 4/-1;
+  display: flex;
+  justify-content: center;
+  /* margin: 1.9rem 0 0 0; */
+}
+
+.monthSettingsContainer {
+  background-color: var(--month-settings-background-color);
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  /* width: min(95%, 350px); */
+  max-width: 97%;
+  /* height: min(90%, 800px); */
+  /* min-height: min(90%, 800px); */
+  min-height: 85%;
+  border-radius: 0.94rem;
+  font-family: var(--main-font-family);
+  font-size: 0.9rem;
+  /* overflow: hidden; */
+}
+
+.monthSettingsPlaceholder {
+  grid-area: 1/-2 / span 4/-1;
+}
+
+.isModal {
+  position: absolute;
+  visibility: hidden;
+  height: 0;
+  width: 0;
+}
+
+.skipAnimation {
+  animation-duration: 0ms;
+}
+
+@media (width <= 700px) {
+  .isModal {
+    width: 1px;
+  }
+}
+
+.mounted {
+  animation: inAnimation 270ms ease-out;
+}
+
+.unmounted {
+  z-index: 2;
+  animation: outAnimation 270ms ease-out;
+  animation-fill-mode: forwards;
+  right: 0;
+}
+
+/* @media (width>700px) {
+} */
+
+.monthSettingsPlaceholder {
+  display: none;
+}
+
+.modal .monthSettingsFormWrapper {
+  justify-content: center;
+}
+
+.modal .monthSettingsContainer {
+  justify-content: space-between;
+  min-height: 90%;
+}
+
+.modal {
+  z-index: 3;
+  margin: 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  align-items: center;
+}
+
+/* .modal.mounted {
+  animation: unset;
+} */
+
+/* .modal:is(.unmounted, .mounted) {
+  animation: outAnimation 0ms;
+} */

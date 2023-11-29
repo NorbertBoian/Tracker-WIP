@@ -1,0 +1,132 @@
+@keyframes inAnimation {
+  0% {
+    /* background-color: red; */
+    /* opacity: 0; */
+    flex: 0 0 auto;
+    /* white-space: nowrap; */
+  }
+  100% {
+    /* background-color: yellow; */
+    /* opacity: 1; */
+    flex: 1 0 auto;
+  }
+}
+
+@keyframes outAnimation {
+  0% {
+    flex: 1 0 auto;
+  }
+  100% {
+    /* white-space: nowrap; */
+    padding-inline: 0;
+    flex: 0 0 auto;
+  }
+}
+
+.daySettingsComponent {
+  display: grid;
+  gap: 0.31rem;
+  justify-items: stretch;
+  background-color: var(--day-component-settings-background-color);
+  flex: 1 0 auto;
+  width: 0px;
+  padding: 0.375rem 0.2rem 0.5rem 0.2rem;
+  animation: inAnimation var(--day-settings-animation-duration)
+    var(--day-settings-animation-timing-function);
+}
+
+.hide {
+  animation: outAnimation var(--day-settings-animation-duration)
+    var(--day-settings-animation-timing-function);
+  animation-fill-mode: forwards;
+}
+
+.doNotDisplay {
+  display: none;
+}
+
+.daySettingsString {
+}
+
+.daySettingsDotContainer {
+  padding: 0 0.2rem 0 0;
+  justify-content: flex-end;
+  display: flex;
+}
+
+.daySettingsDotContainer > div {
+  width: 0.69rem;
+  height: 0.69rem;
+  background-color: var(--day-component-settings-dot-background-color);
+  border-radius: 50%;
+}
+
+.daySettingsComponent pre {
+  font-family: var(--main-font-family);
+  margin-block: 1.1em 0;
+  white-space: pre-wrap;
+  font-weight: normal;
+  font-size: 0.78rem;
+  text-align: center;
+  color: var(--day-component-settings-header-text-color);
+}
+
+.daySettingRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.iconWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 1rem;
+  height: 1rem;
+}
+
+.dollarIcon {
+  width: 0.82rem;
+  height: 0.82rem;
+}
+
+.hourglassIcon {
+  width: 0.75rem;
+  height: 0.75rem;
+}
+.percentIcon {
+  width: 0.62rem;
+  height: 0.62rem;
+}
+
+.daySettingRow > input {
+  width: 75%;
+  font-family: var(--main-font-family);
+  background-color: var(--day-component-settings-text-input-background-color);
+  color: var(--day-component-text-color);
+  font-size: 0.75rem;
+  text-align: center;
+  border-radius: 0.41em;
+  padding: 0.1em 0;
+}
+
+.daySettingRow > :where(input:focus-visible) {
+  outline: none;
+}
+
+.focused {
+  outline: 2px solid white;
+}
+
+.daySettingRow .invalid.focused {
+  outline: 2px solid var(--warning-color);
+}
+
+.daySettingRow .invalid::placeholder {
+  color: var(--warning-color);
+}
+
+.daySettingRow .invalid {
+  color: var(--warning-color);
+  outline: solid 1px var(--warning-color);
+}

@@ -1,0 +1,130 @@
+.arrowIndicator {
+  width: 6%;
+  aspect-ratio: 1/1;
+  position: absolute;
+  border: 2px solid var(--color-picker-arrow-indicator-color);
+}
+.noArrow {
+  border: 0;
+}
+.bottomArrow {
+  bottom: 0.45rem;
+  border-top: 0;
+}
+.topArrow {
+  top: 0.45rem;
+  border-bottom: 0;
+}
+.rightArrow {
+  right: 0.45rem;
+  border-left: 0;
+}
+.leftArrow {
+  left: 0.45rem;
+  border-right: 0;
+}
+.colorPickerOverlayContainer {
+  z-index: 3;
+  border-radius: var(--large-border-radius);
+  display: grid;
+  grid-template: 1fr/1fr;
+  border: 0;
+  padding: 0;
+  margin: 0;
+  inset: 0px auto auto 0px;
+}
+
+.colorPickerOverlayContainerPosition {
+  position: absolute;
+}
+
+.sliderAndMainGradientContainer {
+  display: flex;
+  padding: 0.9rem;
+  border-radius: 0.3rem;
+}
+
+.sliderAndMainGradientContainerBackground {
+  background-color: rgb(255, 0, 221);
+}
+
+.mainGradientAndDotContainer {
+  touch-action: none;
+  display: grid;
+  grid-template: 1fr/1fr;
+  border: 0;
+  padding: 0;
+}
+
+.mainGradientAndDotContainer:focus-visible {
+  outline: 0;
+}
+
+.mainGradientAndDotContainer:focus-visible .dot {
+  outline: 1px solid black;
+}
+
+.mainGradient {
+  cursor: pointer;
+  grid-area: 1/1/2/2;
+}
+
+.hueSliderContainer {
+  touch-action: none;
+  display: grid;
+  justify-items: center;
+  grid-template: 1fr/1fr;
+  margin: 0 0 0 0.9rem;
+  background-color: transparent;
+  border: 0;
+  padding: 0;
+}
+
+.hueSliderContainer:focus-visible {
+  outline: 0;
+}
+
+.hueSliderContainer:focus-visible .line {
+  outline: 1px solid black;
+  border: 1px solid white;
+}
+
+.hueGradient {
+  cursor: pointer;
+  height: 100%;
+  background: linear-gradient(
+    to bottom,
+    hsl(0, 100%, 50%),
+    hsl(60, 100%, 50%),
+    hsl(120, 100%, 50%),
+    hsl(180, 100%, 50%),
+    hsl(240, 100%, 50%),
+    hsl(300, 100%, 50%),
+    hsl(360, 100%, 50%)
+  );
+  grid-area: 1/1/2/2;
+}
+
+.line {
+  height: 2%;
+  width: 140%;
+  position: relative;
+  grid-area: 1/1/2/2;
+  border: 1px solid black;
+}
+
+.dot {
+  width: 6%;
+  height: 6%;
+  grid-area: 1/1/2/2;
+  position: relative;
+  border: 2px solid white;
+  border-radius: 50%;
+  padding: 0;
+}
+
+.mainGradientDimensions {
+}
+
+.hueGradientDimensions {
+}

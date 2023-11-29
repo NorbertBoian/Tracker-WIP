@@ -1,0 +1,39 @@
+.explanationsComponent {
+  margin: 1rem 0;
+  width: 13.5rem;
+}
+
+.explanationsContainer {
+  height: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.explanationsContainerOther {
+}
+
+.explanationTextContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.explanationTextContainerOther {
+}
+
+.explanationText {
+  text-align: center;
+}
+
+.columnDivider {
+  width: 1px;
+  height: 80%;
+}
+
+.columnDividerColor {
+  background-color: aqua;
+}
+
+.columnDividerOther {
+}

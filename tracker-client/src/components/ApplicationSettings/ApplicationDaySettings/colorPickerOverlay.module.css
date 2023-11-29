@@ -1,0 +1,19 @@
+.disabledDay {
+}
+
+.mainGradientDimensions {
+  width: 12rem;
+  height: 12rem;
+}
+
+.hueGradientDimensions {
+  width: 1.2rem;
+}
+
+.sliderAndMainGradientContainerBackground {
+  background: var(--color-picker-controls-enabled-day-backround-gradient);
+}
+
+.disabledDay .sliderAndMainGradientContainerBackground {
+  background: var(--color-picker-controls-disabled-day-backround-gradient);
+}

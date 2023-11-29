@@ -1,0 +1,39 @@
+.previewContainer {
+  height: 11.5rem;
+  display: grid;
+  align-items: center;
+  align-content: space-between;
+  justify-items: center;
+}
+
+.previewContainerOther {
+}
+
+.exampleDayComponentDimensions {
+  width: 80%;
+}
+
+.exampleDayComponentMargins {
+  margin: 0;
+}
+
+.dayExampleWrapper {
+  height: 10rem;
+  width: 15rem;
+  background-color: var(--main-background-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--large-border-radius);
+  /* box-shadow: var(--main-box-shadow); */
+}
+
+.previewDescription {
+  padding-bottom: 0.6rem;
+  text-align: center;
+}
+
+.previewContainerPlaceholder {
+  height: 11.5rem;
+  width: 15rem;
+}

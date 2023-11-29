@@ -1,0 +1,30 @@
+.lastRow {
+  justify-content: space-between;
+  display: flex;
+  padding: 0.8rem;
+  align-items: center;
+}
+
+.mention {
+  width: 8rem;
+  color: var(--month-settings-mention-text-color);
+  font-size: 0.8rem;
+  margin: 0;
+}
+
+.saveButton {
+  background-color: var(--month-settings-buttons-background-color);
+  color: var(--month-settings-save-button-text-color);
+  font-family: var(--main-font-family);
+  font-size: 0.9rem;
+  border-radius: var(--medium-border-radius);
+  padding: 0.5rem 1rem;
+}
+
+/* .saveButton:disabled {
+  background-color: red;
+} */
+
+.disabled {
+  background-color: red;
+}

@@ -1,0 +1,36 @@
+@keyframes inAnimation {
+  0% {
+    translate: 0 100%;
+    /* opacity: 0; */
+  }
+  100% {
+    /* opacity: 1; */
+    translate: 0 0%;
+  }
+}
+
+@keyframes outAnimation {
+  0% {
+    /* opacity: 1; */
+    translate: 0 0%;
+  }
+  100% {
+    /* opacity: 0; */
+    translate: 0 100%;
+  }
+}
+
+.dayTimeInputsContainer {
+  grid-area: 1/1/2/2;
+}
+
+.timeInputsInAnimation {
+  animation: inAnimation var(--day-input-and-stats-animation-duration)
+    var(--day-input-and-stats-animation-timing-function);
+}
+
+.hide {
+  animation: outAnimation var(--day-input-and-stats-animation-duration)
+    var(--day-input-and-stats-animation-timing-function);
+  animation-fill-mode: forwards;
+}

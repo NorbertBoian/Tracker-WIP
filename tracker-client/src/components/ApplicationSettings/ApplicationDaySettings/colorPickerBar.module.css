@@ -1,0 +1,26 @@
+.disabledDay {
+}
+
+.colorPreviewColoredRectangleBorderColor {
+  border-color: var(
+    --application-settings-enabled-day-bar-color-picker-border-color
+  );
+}
+
+.disabledDay .colorPreviewColoredRectangleBorderColor {
+  border-color: var(
+    --application-settings-disabled-day-bar-color-picker-border-color
+  );
+}
+
+.hexInputBackgroundColor {
+  background-color: var(
+    --application-settings-enabled-day-bar-input-background-color
+  );
+}
+
+.disabledDay .hexInputBackgroundColor {
+  background-color: var(
+    --application-settings-disabled-day-bar-input-background-color
+  );
+}

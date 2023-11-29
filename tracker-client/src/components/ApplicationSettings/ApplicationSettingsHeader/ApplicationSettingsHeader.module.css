@@ -1,0 +1,100 @@
+@value mobile from "../ApplicationSettings.module.css";
+
+.header {
+  background-color: var(--application-settings-background-color);
+}
+
+.firstRow {
+  display: grid;
+  align-items: center;
+  grid-template: 1fr/1fr;
+  justify-content: space-between;
+}
+
+.header h1 {
+  font-family: var(--secondary-font-family);
+  font-size: 1.5rem;
+  font-weight: normal;
+  text-align: center;
+  margin: 0.7rem auto;
+  grid-area: 1/1/2/2;
+}
+
+.closeButton {
+  justify-self: end;
+  grid-area: 1/1/2/2;
+  font-family: var(--main-font-family);
+  background-color: var(--application-settings-close-button-background-color);
+  color: var(--application-settings-close-button-text-color);
+  font-size: 0.7rem;
+  padding: 0.3rem 0.5rem;
+  border-radius: var(--medium-border-radius);
+  margin-right: 1rem;
+  display: flex;
+  align-items: center;
+}
+
+.closeButton img {
+  margin-left: 0.4rem;
+  width: 0.85rem;
+  height: 0.85rem;
+}
+
+.buttonsDivider {
+  margin: 0;
+  border: 0;
+}
+
+.mobileSelectMenu {
+  display: none;
+}
+
+.mobile :is(.generalButton, .colorsButton, .daysButton) {
+  background-color: transparent;
+  color: var(--application-settings-mobile-menu-not-selected-text-color);
+  border: 0;
+  font-family: var(--tertiary-font-family);
+  font-size: 0.9rem;
+  cursor: pointer;
+  padding-inline: 0.5rem;
+}
+
+.mobile .mobileSelectMenu {
+  display: flex;
+  justify-content: center;
+  padding: 0.3rem 0;
+}
+
+.mobile .buttonsDivider {
+  width: 1px;
+  background-color: rgb(102, 102, 102);
+}
+
+.mobile
+  :is(.daysMenu .daysButton, .generalMenu .generalButton, .colorsMenu
+    .colorsButton) {
+  cursor: default;
+  color: var(--application-settings-mobile-menu-selected-text-color);
+}
+
+.mobile .invalid::after {
+  content: "!";
+  padding-left: 0.3rem;
+  color: var(--warning-color);
+}
+
+@media (width <= 480px) {
+  .firstRow {
+    display: flex;
+    grid-template: unset;
+  }
+
+  .header h1 {
+    grid-area: unset;
+  }
+
+  .closeButton {
+    justify-self: unset;
+    grid-area: unset;
+  }
+}

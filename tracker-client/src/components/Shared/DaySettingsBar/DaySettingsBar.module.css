@@ -1,0 +1,106 @@
+.daySettingsDivider {
+  height: 80%;
+  width: 1px;
+  border: 0;
+}
+
+.daySettingsDividerColor {
+  background-color: rgb(170, 255, 0);
+}
+
+.daySettingsDividerMargins {
+  margin-inline: auto;
+}
+
+.hourRequirementsColumn {
+  display: flex;
+  align-items: center;
+}
+
+.hourRequirementsColumnDimensions {
+  width: 55%;
+}
+
+.dayName {
+  text-align: center;
+}
+
+.dayNameFontSize {
+  font-size: 0.9rem;
+}
+
+.dayNameTextColor {
+  color: #ff0000;
+}
+
+.dayNameDimensions {
+  width: 100%;
+}
+
+.dayNameMargins {
+  margin: 0;
+}
+
+.requiredHoursInput {
+  border-radius: 0.4rem;
+  text-align: center;
+  font-family: var(--main-font-family);
+  font-size: 0.9rem;
+}
+
+.requiredHoursInput:where(:focus-visible) {
+  outline: none;
+}
+
+.focused {
+  outline: solid white;
+}
+
+.requiredHoursInputMargins {
+  margin-left: auto;
+}
+
+.requiredHoursInputDimensions {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.requiredHoursInputBackgroundColor {
+  background-color: #00ffbf;
+}
+
+.requiredHoursInputTextColor {
+  color: rgb(247, 0, 255);
+}
+
+.requiredHoursInputTextColor::placeholder {
+  color: rgb(255, 208, 0);
+}
+
+.toggleDayButton {
+  border-radius: 0.5rem;
+  font-size: 0.8rem;
+  font-family: var(--main-font-family);
+  text-align: center;
+  font-weight: lighter;
+}
+
+.toggleDayButtonPadding {
+  padding: 0.3rem 0rem;
+}
+
+.toggleDayButtonMargins {
+  margin-right: auto;
+}
+
+.toggleDayButtonDimensions {
+  width: 30%;
+}
+
+.toggleDayButtonBackgroundColor {
+  background-color: #00ff22;
+}
+
+.toggleDayButtonTextColor {
+  color: rgb(0, 225, 255);
+}

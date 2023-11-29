@@ -1,0 +1,50 @@
+@value mobile from "../../ApplicationSettings.module.css";
+
+.explanationTextContainerOther:first-child {
+  width: 30%;
+}
+
+.explanationTextContainerOther:nth-child(3) {
+  width: 15%;
+}
+
+.explanationTextContainerOther:nth-child(5) {
+  width: 15%;
+}
+
+.columnDividerOther:nth-child(6) {
+  display: none;
+}
+
+.explanationTextContainerOther:last-child {
+  width: 30%;
+}
+
+.mobile .explanationsContainer {
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.mobile .explanationsContainer {
+  height: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.mobile .explanationTextContainerOther:first-child {
+  width: 50%;
+}
+
+.mobile .explanationTextContainerOther:nth-child(3) {
+  width: 30%;
+}
+
+.mobile
+  :is(
+    .explanationTextContainerOther:nth-child(n + 4),
+    .columnDividerOther:nth-child(n + 3)
+  ) {
+  display: none;
+}

@@ -1,0 +1,99 @@
+.daySettingsBarWrapper {
+  background-color: var(
+    --application-settings-enabled-day-bar-background-color
+  );
+  border-radius: var(--large-border-radius);
+  display: flex;
+  overflow: hidden;
+  align-items: center;
+  font-family: var(--main-font-family);
+  height: 2.5rem;
+  justify-content: space-evenly;
+  grid-column: 1/2;
+  margin-block: 0.3rem;
+  flex: 0 0 auto;
+  width: min(20rem, 90%);
+  padding: 0;
+  border: 0;
+}
+
+.daySettingsDivider {
+  height: 70%;
+  width: 1px;
+  background-color: var(--application-settings-day-bar-divider-color);
+  margin: 0;
+  border: 0;
+}
+
+.hourRequirementsColumnDimensions {
+  width: 45%;
+}
+
+.dayNameTextColor {
+  color: var(--application-settings-day-bar-day-name-text-color);
+}
+
+.requiredHoursInputBackgroundColor {
+  background-color: var(
+    --application-settings-enabled-day-bar-input-background-color
+  );
+}
+
+.requiredHoursInputTextColor {
+  color: var(--application-settings-enabled-day-bar-input-text-color);
+}
+
+.requiredHoursInputTextColor::placeholder {
+  color: var(
+    --application-settings-enabled-day-bar-input-placeholder-text-color
+  );
+}
+
+.requiredHoursInputTextColor:invalid::placeholder {
+  color: var(--warning-color);
+}
+
+.requiredHoursInputOutline:invalid {
+  outline: solid 1px var(--warning-color);
+}
+
+.toggleDayButtonMargins {
+  margin: 0;
+}
+
+.toggleDayButtonPadding {
+  padding-block: 0.4rem;
+}
+
+.toggleDayButtonDimensions {
+  width: 33%;
+  /* height: 70%; */
+}
+
+.toggleDayButtonBackgroundColor {
+  background-color: var(
+    --application-settings-day-bar-disable-button-background-color
+  );
+}
+
+.toggleDayButtonTextColor {
+  color: var(--application-settings-day-bar-enable-button-text-color);
+}
+
+.disabledDay {
+  background-color: var(
+    --application-settings-disabled-day-bar-background-color
+  );
+}
+
+.disabledDay .requiredHoursInputBackgroundColor {
+  background-color: var(
+    --application-settings-disabled-day-bar-input-background-color
+  );
+}
+
+.disabledDay .toggleDayButtonBackgroundColor {
+  background-color: var(
+    --application-settings-day-bar-enable-button-background-color
+  );
+}

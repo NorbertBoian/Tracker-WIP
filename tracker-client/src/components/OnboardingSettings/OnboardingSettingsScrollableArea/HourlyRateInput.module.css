@@ -1,0 +1,11 @@
+.descriptionBackgroundColor {
+  background-color: var(
+    --application-settings-hourly-rate-light-background-color
+  );
+}
+
+.containerBackgroundColor {
+  background-color: var(
+    --application-settings-hourly-rate-dark-background-color
+  );
+}

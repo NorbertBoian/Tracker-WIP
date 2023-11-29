@@ -1,0 +1,103 @@
+.mobileFloatingMenuComponent {
+  display: none;
+}
+
+@media (width <= 700px) {
+  .mobileFloatingMenuComponent {
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    margin: 0 0.8rem 0.5rem 0;
+  }
+
+  .optionsButton {
+    color: var(--mobile-floating-menu-button-text-colo);
+    font-size: 1.7rem;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--mobile-floating-menu-button-background-color);
+    border-radius: 50%;
+    font-family: var(--tertiary-font-family);
+    box-shadow: 0px 0.2rem 0.5rem 0px rgba(0, 0, 0, 0.35);
+  }
+
+  .optionButtonsContainer {
+    align-items: center;
+    height: 2rem;
+    display: flex;
+    margin-right: 0.4rem;
+    border-radius: 0.9rem;
+    background-color: var(--mobile-floating-menu-option-background-color);
+    font-family: var(--main-font-family);
+    font-size: 0.9rem;
+    padding: 0.3rem 0;
+    color: var(--mobile-floating-menu-option-text-color);
+  }
+
+  .optionsButtonPlus {
+  }
+
+  .rotatedPlus {
+    transform: rotate(45deg);
+  }
+
+  .scrollUpButton {
+    background-color: var(--mobile-floating-menu-option-background-color);
+    height: 2rem;
+    width: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    box-shadow: 0px 0.2rem 0.5rem 0px rgba(0, 0, 0, 0.35);
+  }
+
+  .upChevronIcon {
+    width: 45%;
+    height: 45%;
+  }
+
+  .optionsButton,
+  .scrollUpButtonContainer {
+    margin: 0;
+  }
+  /* .optionsButton,
+  .scrollUpButtonContainer {
+    width: 3rem;
+    height: 3rem;
+    margin: 0 0.3rem 0.3rem 0;
+  } */
+
+  .scrollUpButtonContainer {
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    background-color: transparent;
+  }
+
+  .saveButton,
+  .loadButton,
+  .downloadButton {
+    padding: 0.1rem 1.1rem;
+    background-color: transparent;
+    font-family: var(--main-font-family);
+    color: var(--mobile-floating-menu-option-text-color);
+  }
+
+  .buttonsDivider {
+    background-color: var(--mobile-floating-menu-divider-color);
+    width: 1px;
+    height: 100%;
+  }
+
+  .optionsContainer {
+    display: flex;
+    align-items: center;
+  }
+}

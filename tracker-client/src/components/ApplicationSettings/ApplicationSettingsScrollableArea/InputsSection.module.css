@@ -1,0 +1,221 @@
+@value mobile from "../ApplicationSettings.module.css";
+
+.inputsContainer {
+  align-content: center;
+  grid-area: 3/1/4/2;
+  height: 7.5rem;
+  align-content: space-between;
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+.inputsContainerVisibility {
+  display: grid;
+}
+
+.preferredLanguageDescription {
+  grid-area: 1/1/2/2;
+  text-align: center;
+}
+
+.defaultRatesDescriptionVisibility,
+.preferredLanguageDescriptionVisibility {
+  display: none;
+}
+
+.languagesListOther {
+  grid-area: 3/1/4/2;
+}
+.selectedLanguageContainerOther {
+  grid-area: 1/1/2/2;
+}
+
+.dimensions {
+  width: 13rem;
+  height: 2.2rem;
+}
+
+.textColor {
+  color: var(--application-settings-displayed-currency-text-color);
+}
+
+.textColor:invalid::placeholder {
+  color: var(--warning-color);
+}
+
+.textColor:invalid {
+  color: var(--warning-color);
+}
+
+.invalid {
+  outline: solid 1px var(--warning-color);
+}
+
+.focused {
+  outline: solid white;
+}
+
+.focused.invalid {
+  outline: solid var(--warning-color);
+}
+
+.languageSelectorBar {
+  display: flex;
+  background-color: var(
+    --application-settings-language-select-dark-background-color
+  );
+  padding: 0;
+  width: 13rem;
+  height: 2.2rem;
+  border-radius: var(--medium-border-radius);
+  overflow: hidden;
+  grid-area: 2/1/3/2;
+}
+
+.horizontalDivider {
+  margin: 0;
+  border: 0;
+}
+
+.selectedLanguageContainer {
+  cursor: pointer;
+  height: 100%;
+  width: 30%;
+  display: flex;
+  background-color: var(
+    --application-settings-language-select-dark-background-color
+  );
+  justify-content: center;
+  align-items: center;
+  border-radius: var(--medium-border-radius);
+}
+
+.selectedLanguageIconsContainerOther:hover {
+  transform: scale(var(--button-hover-scale));
+}
+
+.languageSelectorBar::before {
+  content: attr(data-selected-language);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 1 1 auto;
+  border-radius: 0 var(--medium-border-radius) var(--medium-border-radius) 0;
+  width: 70%;
+  height: 100%;
+  background-color: var(
+    --application-settings-language-select-light-background-color
+  );
+}
+
+.languagesListPosition {
+  position: static;
+}
+
+.languageText {
+  flex: 1 1 auto;
+  text-align: center;
+}
+
+.languagesListMargins {
+  margin: 0;
+}
+
+.languagesListDimensions {
+  width: 100%;
+  height: 100%;
+}
+
+.mobile
+  :is(
+    .notGeneralMenu
+      :is(
+        .preferredLanguageDescriptionVisibility,
+        .defaultRatesDescriptionVisibility,
+        .inputsContainerVisibility,
+        .languagesListOther,
+        .languageSelectorBar
+      ),
+    .downArrowIconOther
+  ) {
+  display: none;
+}
+
+.mobile .selectedLanguageContainer {
+  cursor: default;
+}
+.selectedLanguageIconsContainerOther:hover {
+  transform: initial;
+}
+
+.mobile .inputsContainer {
+  gap: 0.5rem;
+  order: 5;
+  flex: 0 0 auto;
+  margin-top: 0.7rem;
+}
+
+.mobile .languageSelectorBar {
+  flex: 0 0 auto;
+  margin-top: auto;
+  order: 2;
+}
+
+.mobile .languagesListOther {
+  margin-top: 0.2rem;
+  margin-bottom: auto;
+  order: 3;
+  width: 13rem;
+  height: 7.5rem;
+}
+
+.mobile .preferredLanguageDescription {
+  margin-bottom: 3px;
+}
+
+/* @media (max-aspect-ratio: 10/19) { */
+@media (50rem <= height) {
+  .mobile .horizontalDivider {
+    margin-inline: auto;
+    margin-block: 0.7rem;
+    height: 1px;
+    width: 75%;
+    background-color: var(--application-settings-horizontal-divider-color);
+  }
+
+  .mobile .languageSelectorBar {
+    margin: 0;
+  }
+
+  .mobile .languagesListMargins {
+    margin-bottom: 0;
+  }
+
+  .mobile .preferredLanguageDescription,
+  .mobile .defaultRatesDescription {
+    flex: 0 0 auto;
+    width: 100%;
+    text-align: center;
+    padding-top: 1rem;
+  }
+
+  .mobile .preferredLanguageDescriptionVisibility,
+  .mobile .defaultRatesDescriptionVisibility {
+    display: block;
+  }
+
+  .mobile .inputsContainer {
+    margin: 0;
+  }
+
+  .mobile .preferredLanguageDescription {
+    margin-top: auto;
+    order: 0;
+  }
+
+  .mobile .defaultRatesDescription {
+    margin-top: auto;
+    order: 4;
+  }
+}

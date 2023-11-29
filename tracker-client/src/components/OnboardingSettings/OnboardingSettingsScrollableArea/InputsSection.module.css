@@ -1,0 +1,119 @@
+.inputsContainer {
+  display: grid;
+  align-content: center;
+  grid-area: 2/1/3/2;
+  height: 8.5rem;
+  align-content: space-between;
+  width: 100%;
+  justify-items: center;
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+.preferredLanguageDescription,
+.defaultRatesDescription {
+  display: none;
+}
+
+.languagesListOther {
+  grid-area: 2/1/3/2;
+}
+.selectedLanguageContainerOther {
+  grid-area: 1/1/2/2;
+}
+
+.dimensions {
+  width: min(16rem, 90%);
+  height: 2.5rem;
+}
+
+.textColor {
+  color: var(--application-settings-displayed-currency-text-color);
+}
+
+.textColor::placeholder {
+  color: #dfc1c1;
+}
+
+.textColor:invalid {
+  color: var(--warning-color);
+}
+
+.invalid {
+  outline: solid 1px var(--warning-color);
+}
+
+.focused {
+  outline: solid white;
+}
+
+.focusedInvalid {
+  outline: solid var(--warning-color);
+}
+
+.languageSelectorBar {
+  display: flex;
+  background-color: var(
+    --application-settings-language-select-dark-background-color
+  );
+  width: min(16rem, 90%);
+  height: 2.5rem;
+  border-radius: var(--medium-border-radius);
+  overflow: hidden;
+  grid-area: 1/1/2/2;
+  margin-block: 0.5rem;
+}
+
+.selectedLanguageContainer {
+  cursor: pointer;
+  height: 100%;
+  width: 30%;
+  display: flex;
+  background-color: var(
+    --application-settings-language-select-dark-background-color
+  );
+  justify-content: center;
+  align-items: center;
+  border-radius: var(--medium-border-radius);
+}
+
+.selectedLanguageIconsContainerOther:hover {
+  transform: scale(var(--button-hover-scale));
+}
+
+.languageSelectorBar::before {
+  content: "Language";
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 1 1 auto;
+  border-radius: 0 var(--medium-border-radius) var(--medium-border-radius) 0;
+  width: 70%;
+  height: 100%;
+  background-color: var(
+    --application-settings-language-select-light-background-color
+  );
+}
+
+.languagesListPosition {
+  position: static;
+}
+
+.languageText {
+  flex: 1 1 auto;
+  text-align: center;
+}
+
+.languagesListMargins {
+  margin: 0;
+}
+
+.languagesListDimensions {
+  width: min(16rem, 90%);
+  height: 100%;
+}
+
+.showList {
+  display: grid;
+}

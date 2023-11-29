@@ -1,0 +1,206 @@
+.inputsContainer {
+  align-content: center;
+  grid-area: 3/1/4/2;
+  height: 7.5rem;
+  align-content: space-between;
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+.inputsContainerVisibility {
+  display: grid;
+}
+
+.preferredLanguageDescriptionVisibility,
+.defaultRatesDescriptionVisibility {
+  display: none;
+}
+
+.languagesListOther {
+  grid-area: 3/1/4/2;
+}
+.selectedLanguageContainerOther {
+  grid-area: 1/1/2/2;
+}
+
+.dimensions {
+  width: 13rem;
+  height: 2.2rem;
+}
+
+.focused {
+}
+
+.textColor {
+  color: aqua;
+}
+
+.invalid {
+}
+
+.horizontalDivider {
+  margin: 0;
+  border: 0;
+}
+
+.languageSelectorBar {
+  display: flex;
+  background-color: var(
+    --application-settings-language-select-dark-background-color
+  );
+  width: 13rem;
+  height: 2.2rem;
+  border-radius: var(--medium-border-radius);
+  overflow: hidden;
+  padding: 0;
+  grid-area: 2/1/3/2;
+}
+
+.selectedLanguageContainer {
+  cursor: pointer;
+  height: 100%;
+  width: 30%;
+  display: flex;
+  background-color: var(
+    --application-settings-language-select-dark-background-color
+  );
+  justify-content: center;
+  align-items: center;
+  border-radius: var(--medium-border-radius);
+}
+
+.selectedLanguageIconsContainerOther:hover {
+  transform: scale(var(--button-hover-scale));
+}
+
+.languageSelectorBar::before {
+  content: "Language";
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 1 1 auto;
+  border-radius: 0 var(--medium-border-radius) var(--medium-border-radius) 0;
+  width: 70%;
+  height: 100%;
+  background-color: var(
+    --application-settings-language-select-light-background-color
+  );
+}
+
+.languagesListPosition {
+  position: static;
+}
+
+.languageText {
+  flex: 1 1 auto;
+  text-align: center;
+}
+
+.languagesListMargins {
+  margin: 0;
+}
+
+.languagesListDimensions {
+  width: 100%;
+  height: 100%;
+}
+
+/* @media (width>700px) {
+  .preferredLanguageDescription {
+    grid-area: 1/1/2/2;
+    text-align: center;
+  }
+
+  .preferredLanguageDescriptionVisibility {
+    display: block;
+  }
+
+  .languageSelectorBar::before {
+    content: attr(data-selected-language);
+  }
+}
+
+@media (width<=700px) {
+  .selectedLanguageContainer {
+    cursor: default;
+  }
+  .selectedLanguageIconsContainerOther:hover {
+    transform: initial;
+  }
+
+  .downArrowIconOther {
+    display: none;
+  }
+
+  .inputsContainer {
+    order: 5;
+    flex: 0 0 auto;
+    margin-top: 0.7rem;
+  }
+
+  .languageSelectorBar {
+    flex: 0 0 auto;
+    margin-top: auto;
+    order: 2;
+  }
+
+  .languagesListOther {
+    margin-top: 0.2rem;
+    margin-bottom: auto;
+    order: 3;
+    width: 13rem;
+    height: 7.5rem;
+  }
+}
+
+@media (width<=350px) and (height>=185vw),
+  (480px<width<=700px) and (height>=730px),
+  (350px<width<=480px) and (height>=815px) {
+  .languageSelectorBar::before {
+    content: attr(data-selected-language);
+  }
+
+  .horizontalDivider {
+    margin-inline: auto;
+    margin-block: 0.7rem;
+    height: 1px;
+    width: 75%;
+    background-color: var(--application-settings-horizontal-divider-color);
+  }
+
+  .languageSelectorBar {
+    margin: 0;
+  }
+
+  .languagesListMargins {
+    margin-bottom: 0;
+  }
+
+  .preferredLanguageDescription,
+  .defaultRatesDescription {
+    flex: 0 0 auto;
+    width: 100%;
+    text-align: center;
+    padding-top: 1rem;
+  }
+
+  .preferredLanguageDescriptionVisibility,
+  .defaultRatesDescriptionVisibility {
+    display: block;
+  }
+
+  .inputsContainer {
+    margin: 0;
+  }
+
+  .preferredLanguageDescription {
+    margin-top: auto;
+    order: 0;
+  }
+
+  .defaultRatesDescription {
+    margin-top: auto;
+    order: 4;
+  }
+} */

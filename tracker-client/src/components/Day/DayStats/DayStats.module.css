@@ -1,0 +1,84 @@
+@keyframes inAnimation {
+  0% {
+    translate: 0 -100%;
+    /* opacity: 0; */
+  }
+  100% {
+    /* opacity: 1; */
+    translate: 0 0%;
+  }
+}
+
+@keyframes outAnimation {
+  0% {
+    /* opacity: 1; */
+    translate: 0 0%;
+  }
+  100% {
+    /* opacity: 0; */
+    translate: 0 -100%;
+  }
+}
+
+.dayStatsComponent {
+  display: flex;
+  font-family: var(--main-font-family);
+  font-size: 0.82rem;
+  white-space: nowrap;
+  grid-area: 1/1/2/2;
+}
+
+.dayStatsInAnimation {
+  animation: inAnimation var(--day-input-and-stats-animation-duration)
+    var(--day-input-and-stats-animation-timing-function);
+}
+
+.hide {
+  animation: outAnimation var(--day-input-and-stats-animation-duration)
+    var(--day-input-and-stats-animation-timing-function);
+  animation-fill-mode: forwards;
+}
+
+.hoursWorkedFirstHalf,
+.hoursWorkedSecondHalf,
+.payFirstHalf,
+.paySecondHalf {
+  height: 1.6rem;
+  padding: 0.35em 0;
+  margin: 0.5rem 0 0 0;
+  text-align: center;
+}
+
+.hoursWorkedSecondHalf,
+.paySecondHalf {
+  height: 1.6rem;
+  border-radius: 0 var(--medium-border-radius) var(--medium-border-radius) 0;
+  color: var(--day-component-stats-second-column-text-color);
+}
+
+.hoursWorkedFirstHalf,
+.payFirstHalf {
+  border-radius: var(--medium-border-radius) 0 0 var(--medium-border-radius);
+  overflow: hidden;
+  background-color: var(--day-component-stats-first-column-background-color);
+  color: var(--day-component-stats-first-column-text-color);
+}
+
+.paySecondHalf {
+  background-color: var(
+    --day-component-stats-second-column-dark-background-color
+  );
+}
+
+.hoursWorkedSecondHalf {
+  background-color: var(
+    --day-component-stats-second-column-light-background-color
+  );
+}
+
+.firstHalvesContainer,
+.secondHalvesContainer {
+  flex: 1 1 auto;
+  display: flex;
+  flex-direction: column;
+}

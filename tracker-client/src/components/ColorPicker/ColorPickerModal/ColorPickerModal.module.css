@@ -1,0 +1,56 @@
+.colorPickerModal {
+  z-index: 4;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  background-color: var(
+    --application-settings-color-picker-modal-background-color
+  );
+  padding: 1rem;
+  border-radius: 1rem;
+  width: min(95%, 400px);
+  height: min(95%, 700px);
+  border: 0;
+}
+
+.scrollableArea {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* justify-content: center; */
+  gap: 1rem;
+  overflow: auto;
+  /* padding: 2rem; */
+}
+
+.colorPickerOverlayContainerPosition {
+  position: static;
+}
+
+.sliderAndMainGradientContainerBackground {
+  background: var(--main-background-color);
+}
+
+.colorPreviewColoredRectangleBorderColor {
+  border-color: var(--color-picker-modal-colored-rectangle-border-color);
+}
+
+.hexInputBackgroundColor {
+  background-color: var(--color-picker-modal-input-background-color);
+}
+
+.closeButton,
+.okButton {
+  font-family: var(--main-font-family);
+  font-size: 0.8rem;
+}
+
+.footer {
+  display: flex;
+}

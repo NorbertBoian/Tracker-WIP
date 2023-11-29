@@ -1,0 +1,60 @@
+@keyframes goUp {
+  0% {
+    translate: 0;
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    translate: 0 -200px;
+  }
+}
+
+@keyframes goRight {
+  0% {
+    translate: 0;
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    translate: 100px;
+  }
+}
+
+@keyframes inAnimation {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.notification {
+  font-family: var(--main-font-family);
+  border-radius: var(--medium-border-radius);
+  position: fixed;
+  font-size: 0.9rem;
+  right: 0.3rem;
+  animation: inAnimation 150ms ease-in, goUp 800ms ease-in 1700ms;
+  margin-block: 0.3rem;
+  padding-inline: 1rem;
+  padding-block: 0.2rem;
+  box-shadow: 0.07rem 0.08rem 0.4rem 0.22rem rgba(0, 0, 0, 0.1);
+}
+
+.alert {
+  animation: inAnimation 150ms ease-in, goUp 800ms ease-in 2500ms;
+  background-color: #c50841;
+  color: #fff0f6;
+}
+
+.defaultClass {
+  background-color: rgb(211, 230, 230);
+  color: #000000;
+}
+
+.clearInputs {
+  margin-block: 0.6rem 0;
+  background-color: var(--menu-clear-inputs-button-background-color);
+  color: var(--menu-clear-inputs-button-text-color);
+}

@@ -1,0 +1,26 @@
+.explanationsComponent {
+  margin-block: 1rem;
+  width: min(20rem, 90%);
+  justify-content: space-between;
+}
+
+.explanationText {
+  text-align: center;
+  padding: 0 0.4rem;
+}
+
+.explanationTextContainerOther:first-child {
+  width: 45%;
+}
+
+.columnDividerOther {
+  display: block;
+}
+
+.explanationTextContainerOther:last-child {
+  width: 33%;
+}
+
+.columnDividerColor {
+  background-color: var(--month-settings-explanations-column-divider-color);
+}

@@ -1,0 +1,36 @@
+.descriptionBackgroundColor {
+  background-color: var(
+    --month-settings-overtime-multiplier-background-color-light
+  );
+}
+
+.containerBackgroundColor {
+  background-color: var(
+    --month-settings-overtime-multiplier-background-color-dark
+  );
+}
+
+.textColor {
+  color: var(--month-settings-overtime-multiplier-text-color);
+}
+
+.textColor::placeholder {
+  color: #d2b6b6;
+}
+
+.textColor:invalid::placeholder {
+  color: var(--warning-color);
+}
+
+.textColor:invalid {
+  color: var(--warning-color);
+}
+
+.invalid {
+  outline: solid 1px var(--warning-color);
+}
+
+.dimensions {
+  width: 13rem;
+  height: 2.2rem;
+}

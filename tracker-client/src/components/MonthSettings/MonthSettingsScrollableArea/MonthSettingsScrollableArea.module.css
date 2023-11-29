@@ -1,0 +1,18 @@
+.scrollableArea {
+  justify-items: center;
+  display: grid;
+  gap: 0.62rem;
+  overflow: auto;
+  padding: 0 0.8rem;
+  scrollbar-width: thin;
+  flex: 1 1 auto;
+}
+
+@media (device-width>700px) {
+  .scrollableArea {
+    scrollbar-width: none;
+  }
+  .scrollableArea::-webkit-scrollbar {
+    display: none;
+  }
+}

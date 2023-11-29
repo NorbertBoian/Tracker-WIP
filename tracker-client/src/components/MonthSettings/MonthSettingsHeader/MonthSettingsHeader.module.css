@@ -1,0 +1,52 @@
+.firstRow {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.monthName {
+  color: var(--month-settings-header-text-color);
+  font-family: var(--tertiary-font-family);
+  font-size: 1.2rem;
+  font-weight: normal;
+  margin: 0 auto;
+  flex: 1 0 100%;
+  order: 1;
+  text-align: center;
+  padding-block: 0.8rem;
+}
+
+.closeButton {
+  justify-self: end;
+  font-family: var(--tertiary-font-family);
+  font-size: 0.69rem;
+  font-weight: bold;
+  color: var(--month-settings-close-button-text-color);
+  background-color: var(--month-settings-buttons-background-color);
+  padding: 0.31rem 0.62rem;
+  border-radius: var(--large-border-radius);
+  margin: 0.4rem 0.4rem 0 auto;
+  order: 0;
+}
+
+@media (width<=700px) {
+  .closeButton {
+    margin-block: 0;
+    margin-left: 0;
+    order: 1;
+  }
+
+  .monthName {
+    font-size: 1rem;
+    margin: 0 auto;
+    order: 0;
+    flex: 1 1 auto;
+    padding-block: 0.4rem;
+  }
+
+  .firstRow {
+    padding-block: 0.5rem 0.2rem;
+  }
+}

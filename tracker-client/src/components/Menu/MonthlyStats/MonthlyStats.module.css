@@ -1,0 +1,67 @@
+.statDescription,
+.statShowcase {
+  padding: 0.12rem 0.5rem;
+}
+
+.statsContainer {
+  font-family: var(--main-font-family);
+  font-size: 0.81rem;
+  flex: 1 1 15.7rem;
+  max-width: 20rem;
+}
+
+.overflowingContainer {
+  display: grid;
+  grid-template: 1fr 1fr / auto auto;
+  align-items: center;
+  justify-items: start;
+  justify-content: center;
+  gap: 0.31rem;
+  padding: 0.31rem;
+  border-radius: 0 1.12rem 0.62rem 0;
+  background: var(--menu-stats-container-background-gradient);
+}
+
+.statDescription {
+  color: var(--menu-stats-container-text-color);
+}
+.statShowcase {
+  color: var(--menu-stats-container-showcase-text-color);
+  background-color: var(--menu-stats-container-showcase-background-color);
+  border-radius: var(--medium-border-radius);
+  text-align: center;
+}
+.statsContainer {
+  order: 17;
+}
+
+@media (width <= 700px), (device-width <= 775px) {
+  .statsContainer {
+    order: 14;
+    margin-block: 0.25rem;
+    padding: 0.31rem;
+    max-width: 98%;
+    font-size: min(4.5vw, 1rem);
+  }
+}
+
+@media (700px < width <= 1170px) and (775px < device-width),
+  (775px < device-width <= 1295px) {
+  .statsContainer {
+    margin-right: 0.5rem;
+    order: 16;
+  }
+
+  .loggedIn {
+    order: 11;
+    height: 0;
+    align-self: flex-start;
+    margin-right: 1.5rem;
+  }
+}
+
+@media (1350px < width <= 1600px) and (1410px < device-width) {
+  .loggedIn {
+    order: 14;
+  }
+}

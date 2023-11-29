@@ -1,0 +1,11 @@
+.descriptionBackgroundColor {
+  background-color: var(
+    --application-settings-overtime-multiplier-light-background-color
+  );
+}
+
+.containerBackgroundColor {
+  background-color: var(
+    --application-settings-overtime-multiplier-dark-background-color
+  );
+}

@@ -1,0 +1,38 @@
+.applicationSettingsContainer {
+  color: var(--application-settings-text-color);
+  font-family: var(--main-font-family);
+  font-size: 0.9rem;
+  background-color: var(--application-settings-background-color);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding-bottom: 0.2rem;
+  border-radius: 0.5rem;
+  /* max-width: 95%; */
+  /* max-height: 95%; */
+  width: min(35rem, 95%);
+  height: min(55rem, 95%);
+  overflow: hidden;
+  z-index: 3;
+}
+
+.applicationSettingsDialog {
+  padding: 0;
+  border: 0;
+}
+
+.isMobile {
+  position: absolute;
+  visibility: hidden;
+  height: 0;
+  width: 0;
+}
+
+@media (width <= 550px), (device-width <= 630px) {
+  .isMobile {
+    width: 1px;
+  }
+}
+
+.mobile {
+}

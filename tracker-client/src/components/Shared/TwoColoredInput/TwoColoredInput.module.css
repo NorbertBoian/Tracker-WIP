@@ -1,0 +1,58 @@
+.descriptionBackgroundColor {
+  background-color: #ffee00;
+}
+
+.containerBackgroundColor {
+  background-color: #00ff80;
+}
+
+.container {
+  display: flex;
+  border-radius: var(--medium-border-radius);
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+.invalid {
+}
+
+.containerOther {
+}
+
+.inputOther {
+}
+
+.textColor {
+  color: rgb(255, 0, 212);
+}
+
+.focused {
+  outline: solid white;
+}
+
+.dimensions {
+  width: 13rem;
+  height: 2.2rem;
+}
+
+.description {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0 var(--medium-border-radius) var(--medium-border-radius) 0;
+  text-align: center;
+  width: 70%;
+}
+
+.input {
+  font-family: var(--main-font-family);
+  font-size: 0.9rem;
+  background-color: transparent;
+  width: 30%;
+}
+
+.input:where(:focus-visible) {
+  outline: none;
+}

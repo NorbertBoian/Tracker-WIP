@@ -1,0 +1,61 @@
+.sliderComponent {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: space-evenly;
+}
+.sliderValueDisplay {
+  width: 20%;
+  text-align: center;
+  font-family: var(--main-font-family);
+  font-size: 0.7rem;
+}
+
+.sliderWrapper {
+  width: 70%;
+  display: grid;
+  grid-template: 1fr/1fr;
+  align-items: center;
+  cursor: pointer;
+  background-color: transparent;
+  border: 0;
+}
+
+.sliderBar {
+  grid-area: 1/1/2/2;
+  border-radius: 2rem;
+  overflow: hidden;
+  background-color: var(
+    --application-settings-slider-bar-empty-background-color
+  );
+  height: 0.4rem;
+  overscroll-behavior: none;
+}
+.sliderProgress {
+  background-color: var(
+    --application-settings-slider-bar-filled-background-color
+  );
+  height: 100%;
+  box-shadow: var(--main-box-shadow);
+}
+.sliderDot {
+  cursor: pointer;
+  border: 0;
+  padding: 0;
+  display: block;
+  position: relative;
+  grid-area: 1/1/2/2;
+  height: 0.8rem;
+  width: 0.8rem;
+  background-color: var(--application-settings-slider-bar-dot-color);
+  border-radius: 50%;
+}
+
+.sliderWrapper:focus-visible {
+  outline: 0;
+}
+
+.sliderWrapper:focus-visible .sliderDot {
+  outline: solid rgb(255, 255, 255);
+  background-color: #216258;
+}

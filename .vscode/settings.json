@@ -1,0 +1,7 @@
+{
+  "typescript.tsdk": "./tracker-client/node_modules/typescript/lib",
+  // "typescript.tsdk": "./tracker-server/node_modules/typescript/lib"
+
+  "css.lint.validProperties": ["composes"],
+  "css.customData": [".vscode/css_custom_data.json"]
+}

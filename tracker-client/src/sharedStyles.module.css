@@ -1,0 +1,27 @@
+.defaultButton {
+  border: 0;
+  cursor: pointer;
+  transition: all 30ms ease-in-out;
+}
+
+.defaultButton:focus-visible {
+  outline: solid white;
+}
+
+.defaultInput {
+  border: 0;
+  text-align: center;
+}
+
+.blackOverlay {
+  z-index: 4;
+  background-color: rgba(0, 0, 0, 0.95);
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

@@ -1,0 +1,35 @@
+@value mobile from "../ApplicationSettings.module.css";
+
+.footer {
+  background-color: var(--application-settings-background-color);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.mention {
+  font-size: 0.7rem;
+  margin-left: 1rem;
+  width: 70%;
+  color: var(--application-settings-mention-color);
+}
+.saveButton {
+  font-family: var(--main-font-family);
+  background-color: var(--application-settings-save-button-background-color);
+  color: var(--application-settings-save-button-text-color);
+  margin-right: 1rem;
+  padding: 0.3rem 1rem;
+  border-radius: var(--medium-border-radius);
+  font-size: 0.9rem;
+}
+
+/* .saveButton:disabled {
+  background-color: red;
+} */
+
+.disabled {
+  background-color: red;
+}
+
+/* .mobile .mention {
+  font-size: 0.5rem;
+} */

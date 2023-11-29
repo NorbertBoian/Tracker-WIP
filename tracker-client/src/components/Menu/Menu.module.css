@@ -1,0 +1,180 @@
+.menuComponent {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  flex-wrap: wrap;
+  white-space: nowrap;
+}
+
+.logOutButton {
+  display: flex;
+  order: 15;
+  background-color: transparent;
+  padding: 0.3rem;
+  margin-right: 3px;
+}
+
+.logOutIcon {
+  width: 1rem;
+  height: 1rem;
+}
+
+.guideButton {
+  order: 0;
+  z-index: 3;
+  position: relative;
+  align-self: flex-start;
+  display: inline-block;
+  height: 2.75rem;
+  width: 3.75rem;
+  padding: 0;
+}
+
+.guideButtonCircle {
+  grid-area: 1/1/2/2;
+  background: var(--menu-guide-button-background-color);
+  width: 5.56rem;
+  height: 5.56rem;
+  border-radius: 50%;
+  position: relative;
+  top: -2.81rem;
+  left: -2.19rem;
+  box-shadow: var(--main-box-shadow);
+}
+
+.guideButtonText {
+  grid-area: 1/1/2/2;
+  align-self: start;
+  position: absolute;
+  top: 0;
+  color: var(--menu-guide-button-text-color);
+  padding: 0.31rem 0 0 0.12rem;
+}
+
+.guideButton {
+  font-family: "Oswald", sans-serif;
+  font-size: 1.12rem;
+  background-color: transparent;
+}
+
+.guideButton:focus-visible {
+  outline: 0;
+}
+
+.guideButton:focus-visible .guideButtonCircle {
+  outline: solid white;
+}
+
+.mobileGuide {
+  display: none;
+}
+
+.flexBreak2,
+.flexBreak {
+  flex: 1 0 100%;
+  height: 0;
+  margin: 0;
+  border: 0;
+}
+
+.flexBreak2 {
+  display: none;
+}
+
+.flexBreak {
+  order: 16;
+  /* height: 0.3rem; */
+}
+
+.languagesDropdownContainer {
+  z-index: 4;
+  margin: 0 0.25rem;
+  order: 13;
+  height: 1.75rem;
+  width: 3.62rem;
+  position: relative;
+}
+
+@media (width <= 700px), (device-width <= 775px) {
+  .guideButton {
+    height: 0;
+    display: none;
+  }
+
+  .mobileGuide {
+    order: 1;
+    display: inline;
+    margin-inline: 1rem auto;
+    margin-block: 0;
+    font-family: var(--main-font-family);
+    font-size: 0.9rem;
+    background-color: transparent;
+  }
+
+  .flexBreak {
+    order: 4;
+  }
+
+  .logOutButton {
+    order: 3;
+    padding: 0 0.3rem;
+  }
+
+  .languagesDropdownContainer {
+    display: none;
+  }
+}
+
+@media (1170px < width <= 1350px) and (1295px < device-width),
+  (1295px < device-width <= 1410px) {
+  .logOutButton {
+    align-self: flex-start;
+    margin: 0;
+    order: 22;
+  }
+}
+
+@media (700px < width <= 1170px) and (775px < device-width),
+  (775px < device-width <= 1295px) {
+  .loggedIn .flexBreak2 {
+    display: block;
+    height: 0.5rem;
+  }
+
+  .logOutButton {
+    order: 3;
+  }
+
+  .languagesDropdownContainer {
+    order: 7;
+  }
+
+  .flexBreak {
+    order: 8;
+  }
+
+  .flexBreak2 {
+    order: 15;
+    display: block;
+    height: 0.5rem;
+  }
+}
+
+@media (1350px < width <= 1600px) and (1410px < device-width) {
+  .loggedIn .flexBreak {
+    order: 13;
+  }
+
+  .loggedIn :is(.languagesDropdownContainer, .logOutButton) {
+    align-self: start;
+  }
+
+  .loggedIn .languagesDropdownContainer {
+    order: 15;
+    margin-left: auto;
+  }
+
+  .loggedIn .logOutButton {
+    order: 17;
+  }
+}

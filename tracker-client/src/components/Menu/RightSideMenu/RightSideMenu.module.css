@@ -1,0 +1,193 @@
+.loadButton,
+.saveButton,
+.downloadButton {
+  border: 0;
+  font-family: var(--tertiary-font-family);
+  font-size: 0.81rem;
+  color: var(--menu-wide-button-text-color);
+  border-radius: var(--large-border-radius);
+  padding: 0.23em 1.61em;
+}
+
+.loadButton {
+  margin: 0 0 0 auto;
+  background: var(--menu-load-button-background-color);
+}
+
+.downloadButton {
+  background: var(--menu-download-button-background-color);
+}
+
+.saveButton {
+  background: var(--menu-save-button-background-color);
+}
+.saveStatusContainer {
+  display: flex;
+  align-items: center;
+  width: 11ch;
+}
+
+.saveStatusText {
+  color: var(--menu-save-status-text-color);
+  font-family: var(--main-font-family);
+  font-size: 1rem;
+  text-align: right;
+  width: 100%;
+  padding: 0 0.44em 0 0;
+}
+
+.saveStatusDotWrapper {
+  display: flex;
+  align-items: center;
+  height: 1rem;
+}
+
+.saveStatusDot {
+  background-color: var(--menu-save-status-saved-dot-color);
+  width: 0.5rem;
+  height: 0.5rem;
+  position: relative;
+  top: 0.07rem;
+  border-radius: 50%;
+}
+
+.savedClass {
+}
+
+.notSavedClass .saveStatusDot {
+  background-color: var(--menu-save-status-not-saved-dot-color);
+}
+
+.loadButton,
+.saveButton,
+.downloadButton,
+.saveStatusContainer {
+  margin: 0 0.25rem;
+}
+
+.loadButton {
+  order: 10;
+  margin-left: auto;
+}
+.saveButton {
+  order: 11;
+}
+.downloadButton {
+  order: 12;
+}
+
+.saveStatusContainer {
+  order: 14;
+}
+
+@media (width <= 700px), (device-width <= 775px) {
+  .loadButton,
+  .saveButton,
+  .downloadButton {
+    display: none;
+  }
+
+  .saveStatusContainer {
+    order: 2;
+    margin: 0 0.25rem 0 0;
+    justify-content: flex-end;
+  }
+}
+
+@media (1350px < width <= 1600px) and (1410px < device-width) {
+  .loadButton,
+  .saveButton,
+  .downloadButton {
+    align-self: flex-start;
+  }
+
+  .loggedInLoadButton,
+  .loggedInDownloadButton,
+  .loggedInSaveButton {
+    align-self: center;
+  }
+
+  .loadButton {
+    order: 18;
+  }
+  .saveButton {
+    order: 19;
+  }
+  .downloadButton {
+    order: 20;
+  }
+
+  .loggedInLoadButton {
+    order: 10;
+  }
+  .loggedInDownloadButton {
+    order: 11;
+  }
+  .loggedInSaveButton {
+    order: 12;
+  }
+
+  .loggedInSaveStatusContainer {
+    order: 16;
+    align-self: start;
+  }
+}
+
+@media (1170px < width <= 1350px) and (1295px < device-width),
+  (1295px < device-width <= 1410px) {
+  .loadButton,
+  .saveButton,
+  .downloadButton,
+  .saveStatusContainer {
+    align-self: flex-start;
+  }
+
+  .loadButton {
+    order: 18;
+  }
+  .saveButton {
+    order: 19;
+  }
+  .downloadButton {
+    order: 20;
+  }
+
+  .saveStatusContainer {
+    padding: 0.2rem 0 0 0;
+    order: 21;
+  }
+}
+
+@media (700px < width <= 1170px) and (775px < device-width),
+  (775px < device-width <= 1295px) {
+  .loadButton,
+  .saveButton,
+  .downloadButton {
+    padding-inline: 4%;
+  }
+
+  .saveStatusText {
+    text-align: left;
+    order: 1;
+    padding: 0;
+    padding: 0 0 0 0.44em;
+  }
+
+  .saveStatusDot {
+    order: 0;
+  }
+
+  .saveStatusContainer {
+    order: 2;
+  }
+
+  .loadButton {
+    order: 4;
+  }
+  .saveButton {
+    order: 5;
+  }
+  .downloadButton {
+    order: 6;
+  }
+}

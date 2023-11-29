@@ -1,0 +1,70 @@
+.daySettingsBarComponent {
+  display: flex;
+  background-color: var(--month-settings-enabled-day-bar-background-color);
+  align-items: center;
+  font-family: var(--main-font-family);
+  border-radius: var(--large-border-radius);
+  overflow: hidden;
+  /* width: 13.5rem; */
+  width: 95%;
+  height: 2.5rem;
+  border: 0;
+  padding: 0;
+}
+
+.dayNameTextColor {
+  color: var(--month-settings-day-bar-day-name-text-color);
+}
+
+.daySettingsDividerColor {
+  background-color: var(--month-settings-day-bar-column-divider-color);
+}
+
+.requiredHoursInputBackgroundColor {
+  background-color: var(
+    --month-settings-enabled-day-bar-input-background-color
+  );
+}
+
+.requiredHoursInputTextColor {
+  color: var(--month-settings-day-bar-input-text-color);
+}
+
+.requiredHoursInputTextColor::placeholder {
+  color: var(--month-settings-day-bar-input-placeholder-text-color);
+}
+
+.requiredHoursInputTextColor:invalid::placeholder {
+  color: var(--warning-color);
+}
+
+.requiredHoursInputOutline:invalid {
+  color: var(--warning-color);
+  outline: solid 1px var(--warning-color);
+}
+
+.toggleDayButtonBackgroundColor {
+  background-color: var(
+    --month-settings-day-bar-disable-day-button-background-color
+  );
+}
+
+.toggleDayButtonTextColor {
+  color: var(--month-settings-day-bar-disable-day-button-text-color);
+}
+
+.disabledDay {
+  background-color: var(--month-settings-disabled-day-bar-background-color);
+}
+
+.disabledDay .requiredHoursInputBackgroundColor {
+  background-color: var(
+    --month-settings-disabled-day-bar-input-background-color
+  );
+}
+
+.disabledDay .toggleDayButtonBackgroundColor {
+  background-color: var(
+    --month-settings-day-bar-enable-day-button-background-color
+  );
+}

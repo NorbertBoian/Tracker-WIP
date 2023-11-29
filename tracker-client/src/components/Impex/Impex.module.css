@@ -1,0 +1,317 @@
+.fileInput {
+  display: none;
+}
+
+.container {
+  font-family: var(--main-font-family);
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+}
+
+.impexDialog {
+  background-color: rgb(29, 25, 25);
+  border: 0;
+  padding: 0;
+  border-radius: var(--medium-border-radius);
+  box-shadow: var(--medium-box-shadow);
+  /* min-height: 30rem; */
+  height: 30rem;
+  aspect-ratio: 10/12;
+}
+
+.impexDialog::backdrop {
+  background-color: rgba(0, 0, 0, 0.8);
+  backdrop-filter: blur(2px);
+}
+
+.importHeading,
+.exportHeading {
+  font-family: var(--main-font-family);
+  font-size: 1.3rem;
+  margin: 0;
+}
+
+.closeButton {
+  position: absolute;
+  top: 0;
+  right: 0;
+  font-family: var(--main-font-family);
+  font-size: 1rem;
+  border-radius: var(--medium-border-radius);
+  padding: 0.2rem 0.8rem;
+}
+
+.exportFieldsets {
+  display: flex;
+  margin: 1rem 0;
+}
+
+.header {
+  position: relative;
+}
+
+.exportSelects,
+.importSelects {
+  margin-top: 0.5rem;
+  display: flex;
+}
+
+.importFileElement {
+  display: flex;
+  margin: 1rem 0;
+}
+
+.selectedFileName {
+  border-radius: var(--medium-border-radius);
+  background-color: rgb(102, 98, 59);
+  height: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 0.7rem;
+  flex: 1 0 10rem;
+}
+
+.chooseFileButton {
+  flex: 0 1 6rem;
+  border-radius: var(--medium-border-radius);
+  background-color: rgb(102, 98, 59);
+  height: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.exportYearSelectWrapper,
+.importYearSelectWrapper {
+  display: flex;
+  /* width: 7rem; */
+  height: 2rem;
+  flex: 12 1 6rem;
+}
+
+.exportMonthSelectWrapper,
+.importMonthSelectWrapper {
+  flex: 8 0 10rem;
+  display: flex;
+  height: 2rem;
+  /* width: 9rem; */
+  margin-right: 0.7rem;
+}
+
+.exportMonthLabel {
+}
+
+.monthSettingsImportLabel {
+}
+
+.monthSettingsImportFieldset {
+  margin: 0;
+  padding: 0;
+  border: none;
+  display: flex;
+  align-items: center;
+  border-radius: var(--medium-border-radius);
+}
+
+.progressStatus {
+}
+
+.monthSettingsImportCheckbox {
+  width: 1rem;
+  height: 1rem;
+  margin: 0 0.5rem 0 0;
+}
+
+.monthSettingsImportCheckbox:focus-visible {
+  outline: 0;
+}
+
+.focused {
+  outline: solid white;
+}
+
+.jsonFieldset,
+.sheetFieldset {
+  border: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.sheetFieldset {
+  align-items: start;
+  margin-right: 0.7rem;
+  flex: 1 0 10rem;
+}
+
+.jsonFieldset {
+  flex: 0 1 6rem;
+  align-items: center;
+}
+
+.sheetButton {
+  background-color: rgb(73, 61, 61);
+  border-radius: var(--medium-border-radius);
+  /* width: 15rem; */
+  width: 100%;
+  height: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  color: white;
+  cursor: auto;
+  pointer-events: none;
+}
+
+.sheetReady {
+  pointer-events: auto;
+  cursor: pointer;
+  background-color: rgb(148, 118, 36);
+}
+
+.downloadButton {
+  background-color: rgb(73, 61, 61);
+  border-radius: var(--medium-border-radius);
+  /* width: 8rem; */
+  width: 100%;
+  height: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  color: white;
+}
+
+.jsonDownloadLabel,
+.sheetLabel {
+  margin-bottom: 0.3rem;
+}
+
+.exportSection {
+  justify-content: center;
+}
+
+.importSection {
+  justify-content: start;
+}
+
+.importToLabel {
+}
+
+.droppableArea {
+  position: relative;
+}
+
+.dragging {
+  flex: 1;
+}
+
+.dragging .importFileElement {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  z-index: 5;
+  background-color: rgb(29, 25, 25);
+  padding: 1rem 0;
+  margin: 0;
+}
+
+.dragInBox {
+  background-color: red;
+}
+
+.dragging .selectedFileName {
+  display: none;
+}
+
+.dragging .chooseFileButton {
+  width: 100%;
+  height: 100%;
+}
+
+.importButton {
+  font-family: var(--main-font-family);
+  font-size: 1rem;
+  border-radius: var(--medium-border-radius);
+  padding: 0.2rem 0.8rem;
+  margin-left: auto;
+  display: block;
+}
+
+.exportSection,
+.importSection {
+  padding: 0 2rem;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.importSection {
+  padding-bottom: 1rem;
+}
+
+@keyframes inAnimation {
+  0% {
+    opacity: 0;
+    transform: scale(0.5);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes outAnimation {
+  0% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(0.5);
+  }
+}
+
+.successfullMessage {
+}
+
+.mounted {
+  animation: inAnimation 0.5s ease-in-out;
+}
+
+.unmounted {
+  animation: outAnimation 0.5s ease-in-out;
+  animation-fill-mode: forwards;
+}
+
+.footer {
+  display: flex;
+  align-items: center;
+  margin-top: 1rem;
+}
+
+@media (device-width<=700px) {
+  .exportSection,
+  .importSection {
+    padding: 0 1rem;
+  }
+
+  .exportSection {
+    padding-top: 1rem;
+  }
+
+  .impexDialog {
+    /* min-width: 90%; */
+    /* min-height: unset; */
+    aspect-ratio: unset;
+    /* min-height: 95%; */
+  }
+}

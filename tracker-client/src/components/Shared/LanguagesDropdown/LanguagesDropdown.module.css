@@ -1,0 +1,109 @@
+.languagesListOther {
+}
+.selectedLanguageContainerOther {
+}
+
+.languageSelectorBar {
+  padding: 0;
+  background-color: transparent;
+  border-radius: var(--medium-border-radius);
+}
+
+.selectedLanguageIconsContainer {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  user-select: none;
+}
+
+.selectedLanguageIconsContainerOther {
+}
+
+.languageListItem {
+  display: block;
+}
+
+.flagIcon {
+  pointer-events: none;
+}
+
+.selectedLanguageContainer {
+  cursor: pointer;
+  height: 1.75rem;
+  width: 3.62rem;
+  display: flex;
+  background-color: var(--menu-language-selector-dark-background-color);
+  justify-content: center;
+  align-items: center;
+  border-radius: var(--medium-border-radius);
+}
+
+.selectedLanguageContainer:hover {
+  transform: scale(var(--button-hover-scale));
+}
+
+.selectedLanguageFlag,
+.languageOption img {
+  width: 1.69rem;
+  height: 1.06rem;
+  border: solid 0.07rem var(--menu-language-selector-border-color);
+}
+
+.downArrowIcon {
+  width: 1rem;
+  height: 1rem;
+  margin: 0 0 0 0.12rem;
+  transform: rotate(270deg);
+}
+
+.downArrowIconOther {
+}
+
+.languagesList {
+  z-index: 1;
+  padding: 0;
+  display: none;
+  list-style-type: none;
+  gap: 0.37rem;
+  grid-template: 1fr 1fr 1fr/1fr 1fr 1fr 1fr;
+  padding: 0.37rem;
+  border-radius: var(--medium-border-radius);
+  box-shadow: var(--main-box-shadow);
+}
+
+.languagesListPosition {
+  position: relative;
+  right: 7.88rem;
+}
+
+.languagesListMargins {
+  margin: 0.25rem 0 0 0;
+}
+
+.languagesListDimensions {
+  width: 11.5rem;
+}
+
+.languagesListBackgroundColor {
+  background-color: var(--menu-language-selector-light-background-color);
+}
+
+.languageOption {
+  display: flex;
+  justify-content: center;
+  background-color: var(--menu-language-selector-dark-background-color);
+  padding: 0.37rem;
+  border-radius: 0.12rem;
+  width: 100%;
+  height: 100%;
+}
+
+.languageOption:hover {
+  background-color: var(--menu-language-selector-light-background-color);
+}
+
+.showList {
+  display: grid;
+}

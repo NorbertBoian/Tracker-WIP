@@ -1,0 +1,20 @@
+.explanationsComponent {
+  margin: 1rem 0;
+  width: 95%;
+}
+
+.explanationTextContainer {
+  text-align: center;
+}
+
+.explanationTextContainer:first-child {
+  width: 50%;
+}
+
+.explanationTextContainer:last-child {
+  width: 30%;
+}
+
+.columnDividerColor {
+  background-color: var(--month-settings-explanations-column-divider-color);
+}

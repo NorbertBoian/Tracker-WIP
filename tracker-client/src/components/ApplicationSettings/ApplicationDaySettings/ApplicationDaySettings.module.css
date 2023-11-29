@@ -1,0 +1,258 @@
+@value mobile from "../ApplicationSettings.module.css";
+
+.applicationDaySettingsComponent {
+  background-color: var(
+    --application-settings-enabled-day-bar-background-color
+  );
+  border-radius: var(--large-border-radius);
+  display: flex;
+  overflow: hidden;
+  align-items: center;
+  font-family: var(--main-font-family);
+  height: 2.5rem;
+  justify-content: space-evenly;
+  grid-column: 1/3;
+  margin: 0.1rem 0;
+  flex: 0 0 auto;
+  padding: 0;
+  border: 0;
+}
+
+.colorPickerWrapper {
+  height: 100%;
+  width: 30%;
+  display: flex;
+  justify-content: center;
+}
+
+.coloredRectangleBorderColor {
+  border-color: var(
+    --application-settings-enabled-day-bar-color-picker-border-color
+  );
+}
+
+.disabledDay .coloredRectangleBorderColor {
+  border-color: var(
+    --application-settings-disabled-day-bar-color-picker-border-color
+  );
+}
+
+.hexTextInput {
+  background-color: var(
+    --application-settings-enabled-day-bar-input-background-color
+  );
+}
+
+.disabledDay .hexTextInput {
+  background-color: var(
+    --application-settings-disabled-day-bar-input-background-color
+  );
+}
+
+.colorPickerMainGradientWidth {
+  width: 200px;
+}
+
+.colorPickerMainGradientHeight {
+  height: 200px;
+}
+
+.hueSliderWidth {
+  width: 20px;
+}
+
+.daySettingsDivider {
+  height: 70%;
+  width: 1px;
+  background-color: var(--application-settings-day-bar-divider-color);
+  border: 0;
+}
+
+.hourRequirementsColumnDimensions {
+  width: 30%;
+}
+
+.dayNameTextColor {
+  color: var(--application-settings-day-bar-day-name-text-color);
+}
+
+.requiredHoursInputBackgroundColor {
+  background-color: var(
+    --application-settings-enabled-day-bar-input-background-color
+  );
+}
+
+.requiredHoursInputTextColor {
+  color: var(--application-settings-enabled-day-bar-input-text-color);
+}
+
+.requiredHoursInputTextColor::placeholder {
+  color: var(
+    --application-settings-enabled-day-bar-input-placeholder-text-color
+  );
+}
+
+.defaultColorButton {
+  width: 15%;
+  color: var(--application-settings-enabled-day-bar-default-button-text-color);
+  padding: 0.3rem 0;
+  border-radius: 0.5em;
+  font-size: 0.8rem;
+  font-family: var(--main-font-family);
+  text-align: center;
+  font-weight: lighter;
+  background-color: var(
+    --application-settings-enabled-day-bar-default-button-background-color
+  );
+}
+
+.toggleDayButtonMargins {
+  margin: 0;
+}
+
+.toggleDayButtonDimensions {
+  width: 15%;
+}
+
+.toggleDayButtonBackgroundColor {
+  background-color: var(
+    --application-settings-day-bar-disable-button-background-color
+  );
+}
+
+.toggleDayButtonTextColor {
+  color: var(--application-settings-day-bar-enable-button-text-color);
+}
+
+.disabledDay {
+  background-color: var(
+    --application-settings-disabled-day-bar-background-color
+  );
+}
+
+.pickerDisabledDay {
+  background: var(--color-picker-controls-disabled-day-backround-gradient);
+}
+
+.pickerEnabledDay {
+  background: var(--color-picker-controls-enabled-day-backround-gradient);
+}
+
+.disabledDay .requiredHoursInputBackgroundColor {
+  background-color: var(
+    --application-settings-disabled-day-bar-input-background-color
+  );
+}
+
+.disabledDay .toggleDayButtonBackgroundColor {
+  background-color: var(
+    --application-settings-day-bar-enable-button-background-color
+  );
+}
+
+.disabledDay .defaultColorButton {
+  background-color: var(
+    --application-settings-disabled-day-bar-default-button-background-color
+  );
+}
+
+.requiredHoursInputTextColor:invalid::placeholder {
+  color: var(--warning-color);
+}
+
+.requiredHoursInputOutline:invalid {
+  outline: solid 1px var(--warning-color);
+}
+
+@media (width<=350px) {
+  .colorPickerMainGradientWidth {
+    width: 60vw;
+  }
+
+  .colorPickerMainGradientHeight {
+    height: 60vw;
+  }
+
+  .hueSliderWidth {
+    width: 4vw;
+  }
+}
+
+.mobile
+  :is(
+    .generalMenu,
+    .secondDaySettingDivider,
+    .daysMenu :is(.defaultColorButton, .colorPickerWrapper),
+    .colorsMenu
+      :is(
+        .daySettingsDividerVisibility,
+        .requiredHoursInputVisibility,
+        .toggleDayButtonVisibility
+      )
+  ) {
+  display: none;
+}
+
+.mobile .defaultColorButton {
+  /* order: 1; */
+}
+
+.mobile .applicationDaySettingsComponent {
+  margin: 0.4rem 0;
+}
+
+.mobile .daySettingsDividerMargins {
+  margin: 0;
+}
+
+.mobile .applicationDaySettingsComponent {
+  justify-content: space-evenly;
+  width: 100%;
+  max-width: 390px;
+}
+
+.mobile .daysMenu {
+  max-width: 390px;
+}
+
+.mobile .daysMenu .hourRequirementsColumnDimensions {
+  width: 50%;
+}
+
+.mobile
+  :is(
+    .colorsMenu .hourRequirementsColumnDimensions,
+    .toggleDayButtonDimensions
+  ) {
+  width: 30%;
+}
+
+.mobile .defaultColorButton {
+  width: 20%;
+  max-width: 80px;
+}
+
+.mobile .colorPickerWrapper {
+  width: 40%;
+}
+
+@media (width >= 1800px) {
+  .colorPickerMainGradientWidth {
+    width: 12vw;
+  }
+
+  .colorPickerMainGradientHeight {
+    height: 12vw;
+  }
+  .hueSliderWidth {
+    width: 1vw;
+  }
+}
+
+/* @media screen and (360px <= device-width <=450px) {
+  .dayNameFontSize,
+  .defaultColorButton,
+  .hexTextInput {
+    font-size: 0.7rem;
+  }
+} */

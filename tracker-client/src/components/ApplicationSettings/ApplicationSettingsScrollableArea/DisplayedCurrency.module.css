@@ -1,0 +1,11 @@
+.descriptionBackgroundColor {
+  background-color: var(
+    --application-settings-displayed-currency-light-background-color
+  );
+}
+
+.containerBackgroundColor {
+  background-color: var(
+    --application-settings-displayed-currency-dark-background-color
+  );
+}

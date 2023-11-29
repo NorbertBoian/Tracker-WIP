@@ -1,0 +1,96 @@
+.dateAndHolidayStatusWrapper {
+  align-items: center;
+  height: 1.8rem;
+  cursor: pointer;
+  display: grid;
+  align-content: center;
+  justify-items: center;
+  user-select: none;
+  transition: all var(--day-settings-animation-duration)
+    var(--day-settings-animation-timing-function);
+  background-color: transparent;
+  border: 0;
+  /* margin-bottom: 0.4rem; */
+}
+
+.dateAndHolidayStatusWrapper h6 {
+  font-family: var(--main-font-family);
+  margin: 0;
+  font-weight: normal;
+  font-size: 0.82rem;
+  line-height: 1em;
+}
+
+.dateAndHolidayStatusWrapper:hover {
+  /* background-color: var(--day-component-first-row-hover-background-color); */
+}
+
+.dateAndHolidayStatusWrapper:active {
+  background-color: rgb(27, 17, 17);
+}
+
+.daySettingsOpenedCentering {
+  padding: 0 0 0 2rem;
+}
+
+.disabled:hover {
+  background-color: transparent;
+  cursor: auto;
+}
+
+.daySettingsClosedCentering {
+  padding: 0 1.49rem 0 2rem;
+}
+.holidayStatus {
+  font-family: var(--main-font-family);
+  font-size: 0.5rem;
+  line-height: 0.5rem;
+  visibility: hidden;
+  color: rgb(134, 134, 134);
+}
+
+@media (hover: hover) {
+  .dateAndHolidayStatusWrapper:is(:hover, :focus-visible) .holidayTrue {
+    visibility: visible;
+    color: rgb(199, 199, 199);
+  }
+
+  .dateAndHolidayStatusWrapper:is(:hover, :focus-visible) .holidayFalse {
+    visibility: visible;
+    color: var(--day-component-holiday-text--color);
+  }
+
+  .disabled:is(:hover, :focus-visible) .holidayTrue {
+    color: var(--day-component-holiday-text--color);
+  }
+
+  .disabled:is(:hover, :focus-visible) .holidayFalse {
+    visibility: hidden;
+  }
+
+  .dateAndHolidayStatusWrapper:is(:hover, :focus-visible) .holidayTrue::before {
+    content: "UNSET ";
+  }
+
+  .dateAndHolidayStatusWrapper:is(:hover, :focus-visible)
+    .holidayFalse::before {
+    content: "SET ";
+  }
+
+  .disabled:is(:hover, :focus-visible) .holidayTrue::before {
+    display: none;
+  }
+}
+
+.holidayTrue {
+  visibility: visible;
+  color: var(--day-component-holiday-text--color);
+}
+
+.holidayColor {
+  color: var(--day-component-holiday-text--color);
+}
+
+.regularDateColor {
+  color: var(--day-component-regular-date-text-color);
+}
