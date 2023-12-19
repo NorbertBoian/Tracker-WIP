@@ -4,6 +4,19 @@ Live here: https://bojanstimetracker.vercel.app/
 
 Note: Expect noticeable delay for the first requests until the service spins up.
 
+Stack: Typescript, React, Redux(Toolkit), Express, Knex, PostgreSQL
+
+•Implemented authentication using session cookies.\
+•Utilized AES encryption before storing usernames and bcrypt for hashing emails and passwords.\
+•Designed and normalized the database to 3rd normal form.\
+•Implemented a color picker component from scratch.\
+•Added the functionality to programatically build a Google Sheet with almost identical functionality to the web app.\
+•Designed a fully responsive UI and ensured accessibility compliance with ARIA specifications.\
+•Enabled guest and offline usage, storing data in localStorage.\
+•Implemented migrations using Knex.\
+•Implemented internationalization.\
+•Deployed on Vercel (frontend) and Render.com (backend).
+
 # Video showcase
 
 General
