@@ -10,7 +10,7 @@ Stack: Typescript, React, Redux(Toolkit), Express, Knex, PostgreSQL
 •Utilized AES encryption before storing usernames and bcrypt for hashing emails and passwords.\
 •Designed and normalized the database to 3rd normal form.\
 •Implemented a color picker component from scratch.\
-•Added the functionality to programatically build a Google Sheet with almost identical functionality to the web app.\
+•Added the functionality to programmatically build a Google Sheet with almost identical functionality to the web app.\
 •Designed a fully responsive UI and ensured accessibility compliance with ARIA specifications.\
 •Enabled guest and offline usage, storing data in localStorage.\
 •Implemented migrations using Knex.\
